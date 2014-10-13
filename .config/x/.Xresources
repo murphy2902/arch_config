@@ -1,0 +1,74 @@
+! .Xresources
+! 
+! Note:  Dont forget that * is a wildcard
+!
+!
+! terminal colors ----------------------------------------------------
+
+
+!xterm*faceName: terminus
+xterm*faceSize        : 9
+xterm*saveLines       : 16384
+xterm*loginShell      : true
+xterm*charClass       : 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName        : xterm-color
+xterm*eightBitInput   : false
+xterm*borderWidth     : 0
+xterm*colorBDMode     : true
+xterm*allowBoldFonts  : false
+
+!BLK Cursor
+#define _color0       #000d18
+#define _color8       #000d18
+!RED Tag
+#define _color1       #FF9393
+#define _color9       #FF9393
+!GRN SpecialKey
+#define _color2       #73B27C
+#define _color10      #A4FEB1
+!YEL Keyword
+#define _color3       #f0dfaf
+#define _color11      #f0dfaf
+!BLU Number
+#define _color4       #8cc0c3
+#define _color12      #8cc0c3
+!MAG Precondit
+#define _color5       #c0bed1
+#define _color13      #c0bed1
+!CYN Float
+#define _color6       #dfaf0f
+#define _color14      #dfaf0f
+!WHT Search
+#define _color7       #efefef
+#define _color15      #efefef
+!FMT Include, StatusLine, ErrorMsg
+#define _colorBD      #ffcfaf
+#define _colorUL      #ccdc90
+#define _colorIT      #80d4aa
+!TXT Normal, Normal, Cursor
+#define _foreground   #e0bdc6
+#define _background   #333344
+#define _cursorColor  #8faf9f
+
+xterm*color0          : _color0
+xterm*color1          : _color1
+xterm*color2          : _color2
+xterm*color3          : _color3
+xterm*color4          : _color4
+xterm*color5          : _color5
+xterm*color6          : _color6
+xterm*color7          : _color7
+xterm*color8          : _color8
+xterm*color9          : _color9
+xterm*color10         : _color10
+xterm*color11         : _color11
+xterm*color12         : _color12
+xterm*color13         : _color13
+xterm*color14         : _color14
+xterm*color15         : _color15
+xterm*colorBD         : _colorBD
+xterm*colorIT         : _colorIT
+xterm*colorUL         : _colorUL
+xterm*foreground      : _foreground
+xterm*background      : _background
+xterm*cursorColor     : _cursorColor

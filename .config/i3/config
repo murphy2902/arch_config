@@ -1,0 +1,277 @@
+# Should you change your keyboard layout somewhen, delete
+# this file and re-run i3-config-wizard(1).
+#
+
+# i3 config file (v4)
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+
+set $exmod  Mod4
+set $winmod Mod3
+set $netmod Mod2
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below. ISO 10646 = Unicode
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# The font above is very space-efficient, that is, it looks good, sharp and
+# clear in small sizes. However, if you need a lot of unicode glyphs or
+# right-to-left text rendering, you should instead use pango for rendering and
+# chose a FreeType font, such as:
+# font pango:DejaVu Sans Mono 10
+
+# Use Mouse+$exmod to drag floating windows to their wanted position
+floating_modifier $exmod
+
+# Compton Stuff
+
+# exec compton -bG --config ~/.config/compton/config
+
+hide_edge_borders both
+new_window pixel 1
+
+
+bindsym $exmod+j exec shutter -s -e -n -o ~/images/%m-%d-%
+
+#########################################
+#
+#     Application Stuff
+#
+#########################################
+
+for_window [class="Floating"] floating enable
+
+# chromium
+bindsym $exmod+1 exec chromium
+
+# dwb
+bindsym $exmod+shift+1 exec dwb
+
+# firefox
+bindsym $exmod+ctrl+1 exec firefox
+
+# pcmanfm (File Browser)
+bindsym $exmod+2 exec pcmanfm
+
+# vim 
+bindsym $exmod+3 exec xterm -e vim
+
+# eclipse
+bindsym $exmod+e exec eclipse
+
+# ncmpcpp 
+#bindsym $exmod+4 exec xterm -class Floating -e ncmpcpp 
+
+# irssi (irs client)
+bindsym $exmod+5 exec xterm -e weechat-curses
+
+# start a terminal
+bindsym $exmod+Return exec xterm
+bindsym $exmod+Shift+Return exec xterm -class Floating
+
+# start arandr
+bindsym $exmod+a exec arandr
+
+# start nitrogen
+bindsym $exmod+n exec nitrogen
+
+# kill focused window
+bindsym $exmod+Shift+q kill
+
+# start dmenu (a program launcher)
+bindsym $exmod+d exec dmenu_run
+
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+# bindsym $exmod+d exec --no-startup-id i3-dmenu-desktop
+
+#########################################
+#
+#     Color Stuff
+#
+#########################################
+
+# class                 border  backgr. text    indicator
+client.focused          #4c7899 #585577 #ffffff #2e9ef4
+client.focused_inactive #333333 #5f676a #ffffff #484e50
+client.unfocused        #333333 #222222 #888888 #292d2e
+client.urgent           #2f343a #900000 #ffffff #900000
+
+#########################################
+#
+#     Internet Stuff
+#
+#########################################
+
+bindsym $netmod+1 exec chromium mail.google.com
+bindsym $netmod+2 exec chromium www.google.com/calendar
+bindsym $netmod+3 exec chromium www.drive.google.com
+bindsym $netmod+4 exec chromium www.youtube.com
+bindsym $netmod+5 exec chromium www.vcu.edu
+bindsym $netmod+6 exec chromium www.facebook.com
+bindsym $netmod+7 exec chromium www.amazon.com
+
+#########################################
+#
+#     Monitor Stuff
+#
+#########################################
+
+# start arandr (Application Stuff)
+# bindsym $exmod+a exec arandr
+
+# start nitrogen (Application Stuff)
+# bindsym $exmod+n exec nitrogen
+
+#########################################
+#
+#     Music Stuff
+#
+#########################################
+
+# Start ncmpcpp (Application Stuff)
+# bindsym mod4+4 exec xterm -e ncmpcpp
+
+# Audio Up/Down/Mute
+
+bindsym XF86AudioRaiseVolume exec amixer set Master 5+
+bindsym XF86AudioLowerVolume exec amixer set Master 5-
+bindsym XF86AudioMute exec amixer set Master toggle
+
+#########################################
+#
+#     Window Stuff 
+#
+#########################################
+
+# change focus
+bindsym $winmod+h focus left
+bindsym $winmod+j focus down
+bindsym $winmod+k focus up
+bindsym $winmod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $winmod+Left focus left
+bindsym $winmod+Down focus down
+bindsym $winmod+Up focus up
+bindsym $winmod+Right focus right
+
+# move focused window
+bindsym $winmod+Shift+h move left
+bindsym $winmod+Shift+j move down
+bindsym $winmod+Shift+k move up
+bindsym $winmod+Shift+l move right
+
+# split in horizontal orientation
+bindsym $winmod+u split h
+
+# split in vertical orientation
+bindsym $winmod+i split v
+
+# enter fullscreen mode for the focused container
+bindsym $winmod+f fullscreen
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $winmod+s layout stacking
+bindsym $winmod+w layout tabbed
+bindsym $winmod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $winmod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $winmod+space focus mode_toggle
+
+# focus the parent container
+bindsym $winmod+a focus parent
+
+# focus the child container
+#bindsym $winmod+d focus child
+
+#########################################
+#
+#     Workspace Stuff
+#
+#########################################
+
+# setting workspace names
+
+set $WS1 1
+set $WS2 2
+set $WS3 3
+set $WS4 4
+set $WS5 5
+set $WS6 6
+set $WS7 7
+set $WS8 8
+set $WS9 9
+set $WS10 10
+
+# switch to workspace
+bindsym $winmod+1 workspace $WS1
+bindsym $winmod+2 workspace $WS2
+bindsym $winmod+3 workspace $WS3
+bindsym $winmod+4 workspace $WS4
+bindsym $winmod+5 workspace $WS5
+bindsym $winmod+6 workspace $WS6
+bindsym $winmod+7 workspace $WS7
+bindsym $winmod+8 workspace $WS8
+bindsym $winmod+9 workspace $WS9
+bindsym $winmod+0 workspace $WS10
+
+# throw to workspace
+bindsym $winmod+Shift+1 move container to workspace $WS1
+bindsym $winmod+Shift+2 move container to workspace $WS2
+bindsym $winmod+Shift+3 move container to workspace $WS3
+bindsym $winmod+Shift+4 move container to workspace $WS4
+bindsym $winmod+Shift+5 move container to workspace $WS5
+bindsym $winmod+Shift+6 move container to workspace $WS6
+bindsym $winmod+Shift+7 move container to workspace $WS7
+bindsym $winmod+Shift+8 move container to workspace $WS8
+bindsym $winmod+Shift+9 move container to workspace $WS9
+bindsym $winmod+Shift+0 move container to workspace $WS10
+
+# start arandr (Application Stuff)
+# bindsym $exmod+a exec arandr
+
+
+
+# reload the configuration file
+bindsym $exmod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $exmod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $exmod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $winmod+r mode "resize"
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+	position bottom
+        status_command i3status --config ~/.config/i3status/config
+}

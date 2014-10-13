@@ -1,0 +1,18 @@
+# Compton config file
+
+
+
+
+# Shadow
+
+shadow = false;         # Turn off those damn shadows
+
+# Opacity
+
+fading = false;         # No fade when changing opacity; make it instant
+inactive-opacity = 0.8;
+active-opacity = 0.8;   # Need to find a way to make this only for terminals
+
+blur-background = true; # Blur the background of transparent windows
+
+
