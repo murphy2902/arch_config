@@ -42,7 +42,7 @@ run_watch DHCP {
 }
 
 tztime local {
-        format = "%m-%d %H:%M"
+        format = "%m-%d %I:%M"
 }
 
 cpu_usage {

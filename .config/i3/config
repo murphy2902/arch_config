@@ -20,14 +20,19 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # font pango:DejaVu Sans Mono 10
 
 # Use Mouse+$exmod to drag floating windows to their wanted position
-floating_modifier $exmod
+floating_modifier $winmod
 
-# Compton Stuff
-
-# exec compton -bG --config ~/.config/compton/config
 
 hide_edge_borders both
 new_window pixel 1
+
+# This makes it so that anything spawned with the class "Floating" will be...floating.
+# A good example of this is xterm:
+# bindsym $exmod+Shift+Return exec xterm -class Floating
+# Note: -class is a modifier specifically for xterm.  Other methods must
+# be used to change the class of other applications.
+
+for_window [class="Floating"] floating enable
 
 
 bindsym $exmod+j exec shutter -s -e -n -o ~/images/%m-%d-%
@@ -38,7 +43,6 @@ bindsym $exmod+j exec shutter -s -e -n -o ~/images/%m-%d-%
 #
 #########################################
 
-for_window [class="Floating"] floating enable
 
 # chromium
 bindsym $exmod+1 exec chromium
