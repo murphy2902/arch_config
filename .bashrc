@@ -14,6 +14,10 @@ alias pac='sudo pacman -S'
 alias pacs='pacman -Ss'
 alias update='sudo pacman -Syu'
 
+# Safety dance
+
+alias rm='rm -f'
+
 # Error Handling
 alias :q='exit'
 alias :x='exit'

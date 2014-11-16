@@ -47,12 +47,6 @@ bindsym $exmod+j exec shutter -s -e -n -o ~/images/%m-%d-%
 # chromium
 bindsym $exmod+1 exec chromium
 
-# dwb
-bindsym $exmod+shift+1 exec dwb
-
-# firefox
-bindsym $exmod+ctrl+1 exec firefox
-
 # pcmanfm (File Browser)
 bindsym $exmod+2 exec pcmanfm
 
