@@ -10,6 +10,7 @@ alias la='ll -A'
 
 # updated program calls
 alias vim='vim -u ~/.config/vim/vimrc.conf'
+alias wpasupup='sudo wpa_supplicant -B -i wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
 alias pac='sudo pacman -S'
 alias pacs='pacman -Ss'
 alias update='sudo pacman -Syu'
