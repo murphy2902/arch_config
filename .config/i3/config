@@ -56,8 +56,11 @@ bindsym $exmod+3 exec xterm -e vim
 # eclipse
 bindsym $exmod+e exec eclipse
 
+# android studio
+bindsym $exmod+s exec android-studio
+
 # ncmpcpp 
-#bindsym $exmod+4 exec xterm -class Floating -e ncmpcpp 
+bindsym $exmod+4 exec xterm -class Floating -e ncmpcpp 
 
 # irssi (irs client)
 bindsym $exmod+5 exec xterm -e weechat-curses
