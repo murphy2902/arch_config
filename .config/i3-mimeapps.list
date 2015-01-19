@@ -1,0 +1,4 @@
+[Default Applications]
+.pdf=/usr/share/applications/chromium.desktop;/usr/share/applications/firefox.desktop
+.swf=/usr/share/applications/chromium.desktop;/usr/share/applications/firefox.desktop
+.html=/usr/share/applications/chromium.desktop;/usr/share/applications/firefox.desktop

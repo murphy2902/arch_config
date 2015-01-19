@@ -26,6 +26,9 @@ floating_modifier $winmod
 hide_edge_borders both
 new_window pixel 1
 
+workspace_auto_back_and_forth yes
+bindsym $winmod+z workspace back_and_forth
+
 # This makes it so that anything spawned with the class "Floating" will be...floating.
 # A good example of this is xterm:
 # bindsym $exmod+Shift+Return exec xterm -class Floating
@@ -45,7 +48,10 @@ bindsym $exmod+j exec shutter -s -e -n -o ~/images/%m-%d-%
 
 
 # chromium
-bindsym $exmod+1 exec chromium
+bindsym $exmod+Ctrl+1 exec chromium
+
+# dwb 
+bindsym $exmod+1 exec dwb
 
 # pcmanfm (File Browser)
 bindsym $exmod+2 exec pcmanfm
