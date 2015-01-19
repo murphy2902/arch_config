@@ -27,3 +27,8 @@ alias :q='exit'
 alias :x='exit'
 alias quit='exit'
 alias sl='ls'
+
+# Scripts
+
+alias freehosts='sudo mv /etc/hosts /'
+alias blockhosts='sudo mv /hosts /etc/'
