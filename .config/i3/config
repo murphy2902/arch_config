@@ -26,6 +26,11 @@ floating_modifier $winmod
 hide_edge_borders both
 new_window pixel 1
 
+# This is for i3-gaps.  
+# TODO: Figure out how to adjust this stuff
+gaps inner 22
+gaps outer 48
+
 workspace_auto_back_and_forth yes
 bindsym $winmod+z workspace back_and_forth
 
@@ -36,9 +41,8 @@ bindsym $winmod+z workspace back_and_forth
 # be used to change the class of other applications.
 
 for_window [class="Floating"] floating enable
+for_window [class="Octave"] floating enable
 
-
-bindsym $exmod+j exec shutter -s -e -n -o ~/images/%m-%d-%
 
 #########################################
 #
@@ -50,8 +54,8 @@ bindsym $exmod+j exec shutter -s -e -n -o ~/images/%m-%d-%
 # chromium
 bindsym $exmod+Ctrl+1 exec chromium
 
-# dwb 
-bindsym $exmod+1 exec dwb
+# qutebrowser
+bindsym $exmod+1 exec qutebrowser
 
 # pcmanfm (File Browser)
 bindsym $exmod+2 exec pcmanfm
@@ -68,7 +72,7 @@ bindsym $exmod+s exec android-studio
 # ncmpcpp 
 bindsym $exmod+4 exec xterm -class Floating -e ncmpcpp 
 
-# irssi (irs client)
+# weechat (irc client)
 bindsym $exmod+5 exec xterm -e weechat-curses
 
 # start a terminal
@@ -81,16 +85,16 @@ bindsym $exmod+a exec arandr
 # start nitrogen
 bindsym $exmod+n exec nitrogen
 
+# Screenshot tools
+bindsym $exmod+j exec shutter -s -e -n -o ~/images/%m-%d-%
+bindsym $exmod+Ctrl+j exec scrot -s
+
 # kill focused window
 bindsym $exmod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $exmod+d exec dmenu_run
-
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $exmod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $exmod+d exec dmenu_run
+bindsym $exmod+d exec --no-startup-id i3-dmenu-desktop
 
 #########################################
 #
@@ -99,10 +103,10 @@ bindsym $exmod+d exec dmenu_run
 #########################################
 
 # class                 border  backgr. text    indicator
-client.focused          #4c7899 #585577 #ffffff #2e9ef4
-client.focused_inactive #333333 #5f676a #ffffff #484e50
-client.unfocused        #333333 #222222 #888888 #292d2e
-client.urgent           #2f343a #900000 #ffffff #900000
+client.focused          #ffffff #ffffff #ffffff 
+client.focused_inactive #333333 #5f676a #ffffff 
+client.unfocused        #333333 #222222 #888888 
+client.urgent           #2f343a #900000 #ffffff 
 
 #########################################
 #
@@ -150,6 +154,10 @@ bindsym XF86AudioMute exec amixer set Master toggle
 #     Window Stuff 
 #
 #########################################
+
+# Toggle gaps
+bindsym $winmod+g gaps inner all set 0 gaps outer all set 0
+bindsym $winmod+Shift+g gaps inner all set 22 gaps outer all set 48
 
 # change focus
 bindsym $winmod+h focus left

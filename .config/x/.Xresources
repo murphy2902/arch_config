@@ -6,7 +6,8 @@
 ! terminal colors ----------------------------------------------------
 
 
-!xterm*faceName: terminus
+xterm*faceName        : Droid Sans Mono for Powwerline:style=Regular:size=9:antialias=true
+xterm*font            : 7x13
 xterm*faceSize        : 9
 xterm*saveLines       : 16384
 xterm*loginShell      : true
@@ -16,6 +17,7 @@ xterm*eightBitInput   : false
 xterm*borderWidth     : 0
 xterm*colorBDMode     : true
 xterm*allowBoldFonts  : false
+
 
 !BLK Cursor
 #define _color0       #000d18
