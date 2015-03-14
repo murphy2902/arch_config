@@ -1,6 +1,4 @@
-# Transparency handling
-
-#[ -n "$XTERM_VERSION" ] && transset-df -a >/dev/null
+# ~/.bashrc
 
 export EDITOR="vim"
 export BROWSER="chromium"
@@ -28,21 +26,22 @@ alias vim='vim -u ~/.config/vim/vimrc.conf'
 
 # Safety dance
 
-alias rm='rm -f'
+alias rm='rm -I'
 
-# Error Handling
-alias :q='exit'
-alias :x='exit'
+# Error Handling, because I suck
+alias :q='exit' # Dammit vim
+alias :x='exit' # Dammit vim
 alias quit='exit'
 alias sl='ls'
 
 # Scripts
 
-alias freehosts='sudo mv /etc/hosts /'
-alias blockhosts='sudo mv /hosts /etc/'
+alias freehosts='sudo mv /etc/hosts /etc/toasts' # A toast to distraction!
+alias blockhosts='sudo mv /etc/toasts /etc/hosts' # And distraction's inevitable reply.
+# this probably isn't a good thing to have, but Arch's internet is wonky, so there.
 alias wpasupup='sudo wpa_supplicant -B -i wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
-alias mpkg='makepkg -scif'
-alias tartar='tar -xzvf'
+alias mpkg='makepkg -scif' # This will probably be stupid when I install an AUR helper
+alias tartar='tar -xzvf' # There's an xkcd comic about this...
 alias please='sudo $(history -p !!)'
 
 
