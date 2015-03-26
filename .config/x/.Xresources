@@ -18,30 +18,29 @@ xterm*allowBoldFonts  : false
 ! terminal colors ----------------------------------------------------
 
 !Black + Dark Grey
-#define _color0       #000d18
-#define _color8       #000d18
+*color0: #191d20
+*color8: #8a8a86
 ! Dark Red + Red
-#define _color1       #FF9393
-#define _color9       #FF9393
+*color1: #9d96a0
+*color9: #54a8c8
 ! DarkGreen + Green
-#define _color2       #05DF91
-!#73B27C
-#define _color10      #A4FEB1
+*color2: #a0898e
+*color10: #c6c8bf
 ! DarkYellow + Yellow
-#define _color3       #dfaf0f
-#define _color11      #f0dfaf
+*color3: #a07171
+*color11: #c6c8bd
 ! DarkBlue + Blue
-#define _color4       #66cccc
-#define _color12      #99ffff
+*color4: #5289a0
+*color12: #c6c8bc
 ! DarkMagenta + Magenta
-#define _color5       #9b64fb
-#define _color13      #8542ff
+*color5: #9ea09e
+*color13: #d4d3c6
 ! DarkCyan + Cyan
-#define _color6       #dfaf0f
-#define _color14      #dfaf0f
+*color6: #a06667
+*color14: #e0e0d1
 ! Light Grey + White
-#define _color7       #efefef
-#define _color15      #efefef
+*color7: #7897a0
+*color15: #e0dfcf
 !FMT Include, StatusLine, ErrorMsg
 #define _colorBD      #ffcfaf
 #define _colorUL      #ccdc90
@@ -51,22 +50,6 @@ xterm*allowBoldFonts  : false
 #define _background   #333344
 #define _cursorColor  #8faf9f
 
-xterm*color0          : _color0
-xterm*color1          : _color1
-xterm*color2          : _color2
-xterm*color3          : _color3
-xterm*color4          : _color4
-xterm*color5          : _color5
-xterm*color6          : _color6
-xterm*color7          : _color7
-xterm*color8          : _color8
-xterm*color9          : _color9
-xterm*color10         : _color10
-xterm*color11         : _color11
-xterm*color12         : _color12
-xterm*color13         : _color13
-xterm*color14         : _color14
-xterm*color15         : _color15
 xterm*colorBD         : _colorBD
 xterm*colorIT         : _colorIT
 xterm*colorUL         : _colorUL

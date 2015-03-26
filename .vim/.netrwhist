@@ -1,7 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/ryan/.config/vim/plugged/vim-airline/autoload/airline'
 let g:netrw_dirhist_2='/home/ryan/.config/vim/plugged/vim-airline/autoload/airline/themes'
 let g:netrw_dirhist_3='/home/ryan/.config/vim/plugged/vim-airline/autoload/airline'
 let g:netrw_dirhist_4='/home/ryan/documents/projects/artificialIntelligence'
 let g:netrw_dirhist_5='/home/ryan/documents/projects/artificialIntelligence/src'
+let g:netrw_dirhist_6='/tmp/ycm_temp'
+let g:netrw_dirhist_7='/tmp'
+let g:netrw_dirhist_8='/home/ryan/.config/compton'
