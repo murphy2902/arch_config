@@ -32,6 +32,14 @@ servers = (
     address = "irc.undernet.org";
     chatnet = "Undernet";
     port = "6667";
+  },
+  {
+    address = "chat.freenode.net";
+    chatnet = "fn";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
   }
 );
 
@@ -104,6 +112,11 @@ chatnets = {
     max_msgs = "1";
     max_whois = "1";
   };
+  fn = {
+    type = "IRC";
+    nick = "caramelmilkshake";
+    autosendcmd = "/msg NickServ identify 72c3134WmrrQna; wait 2000";
+  };
 };
 
 channels = (
@@ -115,7 +128,8 @@ channels = (
   { name = "#ircsource"; chatnet = "IRCSource"; autojoin = "No"; },
   { name = "#netfuze"; chatnet = "NetFuze"; autojoin = "No"; },
   { name = "#oftc"; chatnet = "OFTC"; autojoin = "No"; },
-  { name = "silc"; chatnet = "SILC"; autojoin = "No"; }
+  { name = "silc"; chatnet = "SILC"; autojoin = "No"; },
+  { name = "#vculug"; chatnet = "fn"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -373,4 +387,10 @@ statusbar = {
 settings = {
   core = { real_name = "Unknown"; user_name = "ryan"; nick = "ryan"; };
   "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { autolog = "yes"; theme = "murf"; };
 };
+ignores = ( { level = "JOINS PARTS QUITS"; } );
+keyboard = ( 
+  { key = "meta-[M"; id = "command"; data = "mouse_xterm "; }
+);
+logs = { };
