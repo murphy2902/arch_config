@@ -41,7 +41,7 @@ bindsym $exmod+Ctrl+1       exec chromium
 bindsym $exmod+2            exec pcmanfm
 bindsym $exmod+3            exec xterm -e vim -u ~/.config/vim/vimrc.conf
 bindsym $exmod+4            exec xterm -class Floating -e ncmpcpp 
-bindsym $exmod+5            exec xterm -e screen irssi
+bindsym $exmod+5            exec xterm -e screen irssi --home=/home/ryan/.config/irssi
 bindsym $exmod+a            exec arandr
 bindsym $exmod+d            exec --no-startup-id i3-dmenu-desktop
 bindsym $exmod+e            exec eclipse
@@ -64,7 +64,11 @@ bindsym $exmod+Shift+r restart
 bindsym $exmod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 
+# # # # # # # # # # # # # # # # # # #
+#
 #     Color Stuff
+#
+# # # # # # # # # # # # # # # # # # #
 
  
 # class                 border  backgr. text    indicator
@@ -74,9 +78,13 @@ client.unfocused        #333333 #222222 #888888
 client.urgent           #2f343a #900000 #ffffff 
 
 
+# # # # # # # # # # # # # # # # # # #
+#
 #     Internet Stuff
-
+#
+# # # # # # # # # # # # # # # # # # #
  
+
 bindsym $netmod+1 exec chromium mail.google.com
 bindsym $netmod+2 exec chromium www.google.com/calendar
 bindsym $netmod+3 exec chromium www.drive.google.com
@@ -86,7 +94,11 @@ bindsym $netmod+6 exec chromium www.facebook.com
 bindsym $netmod+7 exec chromium www.amazon.com
 
 
+# # # # # # # # # # # # # # # # # # #
+#
 #     Music Stuff
+#
+# # # # # # # # # # # # # # # # # # #
 
 
 bindsym XF86AudioRaiseVolume exec amixer set Master 5+
@@ -140,7 +152,13 @@ bindsym $winmod+space focus parent
 bindsym $winmod+Return focus child
 
 
+
+# # # # # # # # # # # # # # # # # # #
+#
 #     Workspace Stuff
+#
+# # # # # # # # # # # # # # # # # # #
+
 
 
 # switch to workspace
@@ -168,15 +186,6 @@ bindsym $winmod+Shift+d move container to workspace d
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym h resize shrink width 10 px or 10 ppt
