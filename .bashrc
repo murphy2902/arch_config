@@ -47,6 +47,7 @@ alias mpkg='makepkg -scif' # This will probably be stupid when I install an AUR 
 alias tartar='tar -xzvf' # There's an xkcd comic about this...
 alias please='sudo $(history -p !!)'
 alias again='clear; $(history -p !!)'
+alias gitpom='git push origin master'
 
 
 ######################################################

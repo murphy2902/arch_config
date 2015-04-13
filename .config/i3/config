@@ -45,7 +45,7 @@ bindsym $exmod+5            exec xterm -e screen irssi --home=/home/ryan/.config
 bindsym $exmod+a            exec arandr
 bindsym $exmod+d            exec --no-startup-id i3-dmenu-desktop
 bindsym $exmod+e            exec eclipse
-bindsym $exmod+j            exec shutter -s -e -n -o ~/images/%m-%d-%
+bindsym $exmod+j            exec shutter -s -e -n -o ~/images/%m-%d-%T
 bindsym $exmod+Ctrl+j       exec scrot -s
 bindsym $exmod+n            exec nitrogen
 bindsym $exmod+s            exec android-studio

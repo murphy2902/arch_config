@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+
 # This is for installing by arch build, including configuring the AUR, 
 # installing packages, installing config files, creating necessary 
 # directories, enabling daemons, etc.  It should be run directly after 
@@ -20,7 +20,7 @@ echo Username?
 
 
 pacman -S sudo
-pacman -S abs arandr archey3 boost chromium clang clang-tools-extra cmake deluge eclipse ettercap expac freecad gimp gnuplot gparted i3 irssi jdk8-openjdk lmms lxappearance mpd ncmpcpp netbeans nitrogen nmap nodejs pcmanfm puddletag redshift screen sxiv vim vlc wordpress wine wireshark-cli wireshark-gtk xorg xterm 
+pacman -S abs arandr archey3 boost chromium clang clang-tools-extra cmake deluge eclipse ettercap expac freecad gimp gnuplot gparted i3 irssi jdk8-openjdk lmms lxappearance mpd ncmpcpp netbeans nitrogen nmap nodejs pcmanfm puddletag redshift rfkill screen screenfetch scrot shutter sxiv vim vlc wordpress wine wireshark-cli wireshark-gtk xorg xterm 
 abs
 mkdir /var/abs/local
 #TODO chown the local directory to the user that was created, or maybe wheel group?
