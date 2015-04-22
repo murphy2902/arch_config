@@ -47,7 +47,7 @@ xterm*allowBoldFonts  : false
 #define _colorIT      #80d4aa
 !TXT Normal, Normal, Cursor
 #define _foreground   #e0bdc6
-#define _background   #333344
+#define _background   #1b1b1b
 #define _cursorColor  #8faf9f
 
 xterm*colorBD         : _colorBD
