@@ -165,6 +165,8 @@ bindsym $winmod+Return focus child
 bindsym $winmod+1 workspace 1
 bindsym $winmod+2 workspace 2
 bindsym $winmod+3 workspace 3
+bindsym $winmod+4 workspace 4
+bindsym $winmod+5 workspace 5
 bindsym $winmod+q workspace q
 bindsym $winmod+w workspace w
 bindsym $winmod+e workspace e
