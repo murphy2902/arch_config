@@ -17,38 +17,85 @@ xterm*allowBoldFonts  : false
 
 ! terminal colors ----------------------------------------------------
 
+! Haruko Bass --------------------------------------------------------
+
 !Black + Dark Grey
-*color0: #191d20
-*color8: #8a8a86
+*color0: #141618
+*color8: #30363B
 ! Dark Red + Red
-*color1: #9d96a0
-*color9: #54a8c8
+*color1: #9B6465
+*color9: #DE8F91
 ! DarkGreen + Green
-*color2: #a0898e
-*color10: #c6c8bf
+*color2: #51CA7E
+*color10: #79DE9E
 ! DarkYellow + Yellow
-*color3: #a07171
-*color11: #c6c8bd
+!?
+*color3: #9B6465
+!?
+*color11: #9B6465
 ! DarkBlue + Blue
-*color4: #5289a0
-*color12: #c6c8bc
+*color4: #4E9AB7
+*color12: #65C8ED
 ! DarkMagenta + Magenta
-*color5: #9ea09e
-*color13: #d4d3c6
+*color5: #5D6DC2
+*color13: #8390D9
 ! DarkCyan + Cyan
-*color6: #a06667
-*color14: #e0e0d1
+!?
+*color6: #9B6465
+!?
+*color14: #9B6465
 ! Light Grey + White
-*color7: #7897a0
-*color15: #e0dfcf
+!?
+*color7: #9B6465
+!?
+*color15: #EAE9DA
 !FMT Include, StatusLine, ErrorMsg
-#define _colorBD      #ffcfaf
-#define _colorUL      #ccdc90
-#define _colorIT      #80d4aa
+!?
+#define _colorBD      #9B6465
+!?
+#define _colorUL      #9B6465
+!?
+#define _colorIT      #9B6465
 !TXT Normal, Normal, Cursor
-#define _foreground   #e0bdc6
-#define _background   #1b1b1b
-#define _cursorColor  #8faf9f
+#define _foreground   #EAE9DA
+#define _background   #30363B
+!?
+#define _cursorColor  #EAE9DA
+
+! 808s And Heartbreak ------------------------------------------------
+
+!Black + Dark Grey
+!*color0: #111111
+!*color8: #788182
+! Dark Red + Red
+!*color1: #F7B1A2
+!*color9: #F7B1A2
+! DarkGreen + Green
+!*color2: #9CD2AE
+!*color10: #c6c8bf
+! DarkYellow + Yellow
+!*color3: #a07171
+!*color11: #F5DCCC
+! DarkBlue + Blue
+!*color4: #A5C0C7
+!*color12: #C7E7CD
+! DarkMagenta + Magenta
+!*color5: #A99E9C
+!*color13: #C9C9C9
+! DarkCyan + Cyan
+!*color6: #C1CDBD
+!*color14: #E1E4E5
+! Light Grey + White
+!*color7: #C2CDBD
+!*color15: #EEEEEE
+!FMT Include, StatusLine, ErrorMsg
+!#define _colorBD      #ffcfaf
+!#define _colorUL      #ccdc90
+!#define _colorIT      #80d4aa
+!TXT Normal, Normal, Cursor
+!#define _foreground   #c1cdcd
+!#define _background   #788182
+!#define _cursorColor  #8faf9f
 
 xterm*colorBD         : _colorBD
 xterm*colorIT         : _colorIT

@@ -178,6 +178,8 @@ bindsym $winmod+d workspace d
 bindsym $winmod+Shift+1 move container to workspace 1
 bindsym $winmod+Shift+2 move container to workspace 2
 bindsym $winmod+Shift+3 move container to workspace 3
+bindsym $winmod+Shift+4 move container to workspace 4
+bindsym $winmod+Shift+5 move container to workspace 5
 bindsym $winmod+Shift+q move container to workspace q
 bindsym $winmod+Shift+w move container to workspace w
 bindsym $winmod+Shift+e move container to workspace e
