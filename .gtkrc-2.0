@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/ryan/.gtkrc-2.0.mine"
-gtk-theme-name="Adwaita"
+gtk-theme-name="Numix-Tomorrow"
 gtk-icon-theme-name="Numix-Circle"
 gtk-font-name="Cantarell 11"
 gtk-cursor-theme-name="Adwaita"
