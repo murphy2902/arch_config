@@ -40,6 +40,15 @@ servers = (
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
+  },
+  {
+    address = "murphy2902.irc.slack.com";
+    chatnet = "RamHacks";
+    port = "6667";
+    password = "ramhacks.hoYltqDhcJV6KWIe2aog";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
   }
 );
 
@@ -117,6 +126,7 @@ chatnets = {
     nick = "caramelmilkshake";
     autosendcmd = "/msg NickServ identify 72c3134WmrrQna; wait 2000";
   };
+  RamHacks = { type = "IRC"; nick = "caramelmilkshake"; };
 };
 
 channels = (
@@ -129,7 +139,8 @@ channels = (
   { name = "#netfuze"; chatnet = "NetFuze"; autojoin = "No"; },
   { name = "#oftc"; chatnet = "OFTC"; autojoin = "No"; },
   { name = "silc"; chatnet = "SILC"; autojoin = "No"; },
-  { name = "#vculug"; chatnet = "fn"; autojoin = "yes"; }
+  { name = "#vculug"; chatnet = "fn"; autojoin = "yes"; },
+  { name = "#general"; chatnet = "RamHacks"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -389,7 +400,10 @@ settings = {
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { autolog = "yes"; theme = "murf"; };
 };
-ignores = ( { level = "JOINS PARTS QUITS"; } );
+ignores = (
+  { level = "JOINS PARTS QUITS"; },
+  { level = "MODES"; servertag = "slack"; }
+);
 keyboard = ( 
   { key = "meta-[M"; id = "command"; data = "mouse_xterm "; }
 );

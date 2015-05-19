@@ -21,85 +21,33 @@ xterm*allowBoldFonts  : false
 
 !Black + Dark Grey
 *color0: #141618
-*color8: #30363B
+*color8: #30363b
 ! Dark Red + Red
-*color1: #9B6465
-*color9: #DE8F91
+*color1: #9b6465
+*color9: #de8f91
 ! DarkGreen + Green
-*color2: #51CA7E
-*color10: #79DE9E
+*color2: #51ca7e
+*color10: #79de9e
 ! DarkYellow + Yellow
-!?
-*color3: #9B6465
-!?
-*color11: #9B6465
+*color3: #f9ba06
+*color11: #fbd25d
 ! DarkBlue + Blue
-*color4: #4E9AB7
-*color12: #65C8ED
+*color4: #4e9ab7
+*color12: #65c8ed
 ! DarkMagenta + Magenta
-*color5: #5D6DC2
-*color13: #8390D9
+*color5: #ffffff
+*color13: #ffffff
 ! DarkCyan + Cyan
-!?
-*color6: #9B6465
-!?
-*color14: #9B6465
+*color6: #ffffff
+*color14: #ffffff
 ! Light Grey + White
-!?
-*color7: #9B6465
-!?
-*color15: #EAE9DA
+*color7: #bab9ad
+*color15: #eae9da
 !FMT Include, StatusLine, ErrorMsg
-!?
-#define _colorBD      #9B6465
-!?
-#define _colorUL      #9B6465
-!?
-#define _colorIT      #9B6465
+xterm*colorBD         : #ffffff
+xterm*colorIT         : #ffffff
+xterm*colorUL         : #ffffff
 !TXT Normal, Normal, Cursor
-#define _foreground   #EAE9DA
-#define _background   #30363B
-!?
-#define _cursorColor  #EAE9DA
-
-! 808s And Heartbreak ------------------------------------------------
-
-!Black + Dark Grey
-!*color0: #111111
-!*color8: #788182
-! Dark Red + Red
-!*color1: #F7B1A2
-!*color9: #F7B1A2
-! DarkGreen + Green
-!*color2: #9CD2AE
-!*color10: #c6c8bf
-! DarkYellow + Yellow
-!*color3: #a07171
-!*color11: #F5DCCC
-! DarkBlue + Blue
-!*color4: #A5C0C7
-!*color12: #C7E7CD
-! DarkMagenta + Magenta
-!*color5: #A99E9C
-!*color13: #C9C9C9
-! DarkCyan + Cyan
-!*color6: #C1CDBD
-!*color14: #E1E4E5
-! Light Grey + White
-!*color7: #C2CDBD
-!*color15: #EEEEEE
-!FMT Include, StatusLine, ErrorMsg
-!#define _colorBD      #ffcfaf
-!#define _colorUL      #ccdc90
-!#define _colorIT      #80d4aa
-!TXT Normal, Normal, Cursor
-!#define _foreground   #c1cdcd
-!#define _background   #788182
-!#define _cursorColor  #8faf9f
-
-xterm*colorBD         : _colorBD
-xterm*colorIT         : _colorIT
-xterm*colorUL         : _colorUL
-xterm*foreground      : _foreground
-xterm*background      : _background
-xterm*cursorColor     : _cursorColor
+xterm*foreground      : #eae9da
+xterm*background      : #30363b
+xterm*cursorColor     : #eae9da
