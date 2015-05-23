@@ -32,9 +32,11 @@ workspace_auto_back_and_forth yes
 for_window [class="Floating"] floating enable
 for_window [class="Octave"] floating enable
 
-
+# # # # # # # # # # # # # # # # # #
+#
 #     Application Stuff
-
+#
+# # # # # # # # # # # # # # # # # #
 
 bindsym $exmod+1            exec qutebrowser
 bindsym $exmod+Ctrl+1       exec chromium
@@ -51,6 +53,9 @@ bindsym $exmod+n            exec nitrogen
 bindsym $exmod+s            exec android-studio
 bindsym $exmod+Return       exec xterm
 bindsym $exmod+Shift+Return exec xterm -class Floating
+
+# Lock the screen
+bindsym $exmod+l exec ~/documents/projects/desktop/lock.sh
 
 # Kill the focused window
 bindsym $exmod+Shift+q      kill
@@ -72,7 +77,7 @@ bindsym $exmod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit short
 
  
 # class                 border  backgr. text    indicator
-client.focused          #ffffff #ffffff #ffffff 
+client.focused          #ffffff #000000 #000000 
 client.focused_inactive #333333 #5f676a #ffffff 
 client.unfocused        #333333 #222222 #888888 
 client.urgent           #2f343a #900000 #ffffff 
@@ -106,7 +111,11 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5-
 bindsym XF86AudioMute        exec amixer set Master toggle
 
 
+# # # # # # # # # # # # # # # # # # #
+#
 #     Window Stuff 
+#
+# # # # # # # # # # # # # # # # # # #
 
 
 # Toggle gaps
@@ -187,6 +196,19 @@ bindsym $winmod+Shift+a move container to workspace a
 bindsym $winmod+Shift+s move container to workspace s
 bindsym $winmod+Shift+d move container to workspace d
 
+# throw and follow
+bindsym $winmod+ctrl+1 move container to workspace 1; workspace 1
+bindsym $winmod+ctrl+2 move container to workspace 2; workspace 2
+bindsym $winmod+ctrl+3 move container to workspace 3; workspace 3
+bindsym $winmod+ctrl+4 move container to workspace 4; workspace 4
+bindsym $winmod+ctrl+5 move container to workspace 5; workspace 5
+bindsym $winmod+ctrl+q move container to workspace q; workspace q
+bindsym $winmod+ctrl+w move container to workspace w; workspace w
+bindsym $winmod+ctrl+e move container to workspace e; workspace e
+bindsym $winmod+ctrl+a move container to workspace a; workspace a
+bindsym $winmod+ctrl+s move container to workspace s; workspace s
+bindsym $winmod+ctrl+d move container to workspace d; workspace d
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -208,5 +230,22 @@ bindsym $winmod+r mode "resize"
 # finds out, if available)
 bar {
 	position bottom
-        status_command i3status --config ~/.config/i3status/config
+   status_command i3status --config ~/.config/i3status/config
+   mode hide     
+   hidden_state hide
+   modifier $winmod
+   wheel_up_cmd nop
+   wheel_down_cmd nop
+   font Droid Sans Mono for Powerline:style=Regular:size=9:antialias=true
+
+   colors {
+      background #30363b
+      statusline #eae9da
+      separator  #eae9ada
+
+      focused_workspace  #30363b #30363b #4e9ab7
+      active_workspace   #30363b #30363b #4e9ab7
+      inactive_workspace #30363b #30363b #eae9da
+      urgent_workspace   #9b6465 #30363b #eae9da
+   }
 }
