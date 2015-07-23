@@ -37,10 +37,24 @@ servers = (
     address = "chat.freenode.net";
     chatnet = "fn";
     port = "6667";
+    password = "caramelmilkshake:B1013668a";
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
   },
+  {
+    address = "irc.freebnc.in";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+  },
+  {
+    address = "localhost";
+    port = "0";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  }
 );
 
 chatnets = {
@@ -112,11 +126,7 @@ chatnets = {
     max_msgs = "1";
     max_whois = "1";
   };
-  fn = {
-    type = "IRC";
-    nick = "caramelmilkshake";
-    autosendcmd = "/msg NickServ identify 72c3134WmrrQna; wait 2000";
-  };
+  fn = { type = "IRC"; nick = "caramelmilkshake"; };
   RamHacks = { type = "IRC"; nick = "caramelmilkshake"; };
 };
 

@@ -19,35 +19,35 @@ xterm*allowBoldFonts  : false
 
 ! Haruko Bass --------------------------------------------------------
 
-!Black + Dark Grey
+!Black + Dark Grey ( Nero, )
 *color0               : #141618
 *color8               : #40464b
-! Dark Red + Red
-*color1               : #9b6465
+! Dark Red + Red ( Turkish Rose, )
+*color1               : #9b6465 
 *color9               : #de8f91
-! DarkGreen + Green
+! DarkGreen + Green ( Medium Sea Green, )
 *color2               : #51ca7e
 *color10              : #79de9e
-! DarkYellow + Yellow
+! DarkYellow + Yellow ( eda757, )
 *color3               : #eda757
 *color11              : #fbd25d
-! DarkBlue + Blue
+! DarkBlue + Blue ( Boston Blue, )
 *color4               : #4e9ab7
 *color12              : #65c8ed
-! DarkMagenta + Magenta
+! DarkMagenta + Magenta ( Strike Master, )
 *color5               : #9b6481
 *color13              : #ffb2bd
-! DarkCyan + Cyan
-*color6               : #ffffff
-*color14              : #ffffff
-! Light Grey + White
+! DarkCyan + Cyan ( Gigas, 
+*color6               : #58488a
+*color14              : #eae9da
+! Light Grey + White ( , Rice Cake )
 *color7               : #bab9ad
 *color15              : #eae9da
 !FMT Include, StatusLine, ErrorMsg
 xterm*colorBD         : #ffffff
 xterm*colorIT         : #fbd25d
 xterm*colorUL         : #de8f91
-!TXT Normal, Normal, Cursor
+!TXT Normal, Normal, Cursor ( Rice Cake, Shark, Rice Cake )
 xterm*foreground      : #eae9da
 xterm*background      : #30363b
 xterm*cursorColor     : #eae9da

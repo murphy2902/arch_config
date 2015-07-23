@@ -51,6 +51,7 @@ bindsym $exmod+j            exec shutter -s -e -n -o ~/images/%m-%d-%T
 bindsym $exmod+Ctrl+j       exec scrot -s
 bindsym $exmod+n            exec nitrogen
 bindsym $exmod+s            exec android-studio
+bindsym $exmod+v            exec vlc
 bindsym $exmod+Return       exec xterm
 bindsym $exmod+Shift+Return exec xterm -class Floating
 
