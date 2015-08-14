@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # ~/.xinitrc
 #
@@ -12,24 +12,16 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Custom key bindings
+[[ -s $XDG_CONFIG_HOME/xmodmap/xmodmap.conf ]] && xmodmap $XDG_CONFIG_HOME/xmodmap/xmodmap.conf
 
-if [ -s ~/.config/xmodmap/xmodmap.conf ]; then
-	xmodmap ~/.config/xmodmap/xmodmap.conf
-fi
 
 # Running .Xresources
-
-[[ -f ~/.config/x/.Xresources ]] && xrdb -merge ~/.config/x/.Xresources
-
-# exec gnome-session
-# exec startkde
-# exec startxfce4
-# ...or the Window Manager of your choice
+[[ -f $XDG_CONFIG_HOME/x/.Xresources ]] && xrdb -merge $XDG_CONFIG_HOME/x/.Xresources
 
 #/usr/bin/xscreensaver -no-splash &
 
-nitrogen --restore &
-#mpd /home/ryan/.config/mpd/mpd.conf &&
-#mpdscribble --conf /home/ryan/.config/mpdscribble/mpdscribble.conf &&
+nitrogen --restore
+#mpd $XDG_CONFIG_HOME/mpd/mpd.conf &&
+#mpdscribble --conf $XDG_CONFIG_HOME/mpdscribble/mpdscribble.conf &
 
 exec i3

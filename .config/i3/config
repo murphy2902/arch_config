@@ -13,7 +13,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $winmod
 
 # Setting up my shadows, and a custom config location to match the others.
-exec compton --config /home/ryan/.config/compton/config -cb 
+exec compton --config ${XDG_CONFIG_HOME}/compton/config -cb 
 
 hide_edge_borders both
 new_window pixel 1
@@ -41,13 +41,13 @@ for_window [class="Octave"] floating enable
 bindsym $exmod+1            exec qutebrowser
 bindsym $exmod+Ctrl+1       exec chromium
 bindsym $exmod+2            exec pcmanfm
-bindsym $exmod+3            exec xterm -e vim -u ~/.config/vim/vimrc.conf
+bindsym $exmod+3            exec xterm -e vim -u ${XDG_CONFIG_HOME}/vim/vimrc.conf
 bindsym $exmod+4            exec xterm -class Floating -e ncmpcpp 
-bindsym $exmod+5            exec xterm -e screen irssi --home=/home/ryan/.config/irssi
+bindsym $exmod+5            exec xterm -e screen irssi --home=${XDG_CONFIG_HOME}/irssi
 bindsym $exmod+a            exec arandr
 bindsym $exmod+d            exec --no-startup-id i3-dmenu-desktop
 bindsym $exmod+e            exec eclipse
-bindsym $exmod+j            exec shutter -s -e -n -o ~/images/%m-%d-%T
+#bindsym $exmod+j            exec shutter -s -e -n -o ~/images/%m-%d-%T
 bindsym $exmod+Ctrl+j       exec scrot -s
 bindsym $exmod+n            exec nitrogen
 bindsym $exmod+s            exec android-studio
@@ -76,12 +76,13 @@ bindsym $exmod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit short
 #
 # # # # # # # # # # # # # # # # # # #
 
- 
+
 # class                 border  backgr. text    indicator
-client.focused          #ffffff #000000 #000000 
-client.focused_inactive #333333 #5f676a #ffffff 
-client.unfocused        #333333 #222222 #888888 
-client.urgent           #2f343a #900000 #ffffff 
+client.focused          #000000 #eae9da #ffffff #eae9da
+client.focused_inactive #000000 #5f676a #ffffff #5f676a
+client.unfocused        #000000 #30363b #888888 #30363b
+client.urgent           #000000 #9b6465 #ffffff #9b6465
+client.placeholder      #000000 #ffffff #ffffff #000000
 
 
 # # # # # # # # # # # # # # # # # # #
