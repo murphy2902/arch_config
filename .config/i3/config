@@ -2,8 +2,11 @@
 set $exmod  Mod4
 set $winmod Mod3
 set $netmod Mod2
+
 set $gapsinner 22
 set $gapsouter 48
+
+set $browser firefox
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -28,8 +31,8 @@ workspace_auto_back_and_forth yes
 # bindsym $exmod+Shift+Return exec xterm -class Floating
 # Note: -class is a modifier specifically for xterm.  Other methods must
 # be used to change the class of other applications.
-
 for_window [class="Floating"] floating enable
+
 for_window [class="Octave"] floating enable
 
 # # # # # # # # # # # # # # # # # #
@@ -38,8 +41,7 @@ for_window [class="Octave"] floating enable
 #
 # # # # # # # # # # # # # # # # # #
 
-bindsym $exmod+1            exec qutebrowser
-bindsym $exmod+Ctrl+1       exec chromium
+bindsym $exmod+1            exec $browser
 bindsym $exmod+2            exec pcmanfm
 bindsym $exmod+3            exec xterm -e vim -u ${XDG_CONFIG_HOME}/vim/vimrc.conf
 bindsym $exmod+4            exec xterm -class Floating -e ncmpcpp 
@@ -47,8 +49,7 @@ bindsym $exmod+5            exec xterm -e screen irssi --home=${XDG_CONFIG_HOME}
 bindsym $exmod+a            exec arandr
 bindsym $exmod+d            exec --no-startup-id i3-dmenu-desktop
 bindsym $exmod+e            exec eclipse
-#bindsym $exmod+j            exec shutter -s -e -n -o ~/images/%m-%d-%T
-bindsym $exmod+Ctrl+j       exec scrot -s
+bindsym $exmod+j            exec scrot -s
 bindsym $exmod+n            exec nitrogen
 bindsym $exmod+s            exec android-studio
 bindsym $exmod+v            exec vlc
@@ -66,8 +67,9 @@ bindsym $exmod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $exmod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
-bindsym $exmod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $exmod+Shift+e exec i3-msg exit
 
 
 # # # # # # # # # # # # # # # # # # #
@@ -76,9 +78,8 @@ bindsym $exmod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit short
 #
 # # # # # # # # # # # # # # # # # # #
 
-
 # class                 border  backgr. text    indicator
-client.focused          #000000 #eae9da #ffffff #eae9da
+client.focused          #000000 #eae9da #000000 #eae9da
 client.focused_inactive #000000 #5f676a #ffffff #5f676a
 client.unfocused        #000000 #30363b #888888 #30363b
 client.urgent           #000000 #9b6465 #ffffff #9b6465
@@ -92,13 +93,13 @@ client.placeholder      #000000 #ffffff #ffffff #000000
 # # # # # # # # # # # # # # # # # # #
  
 
-bindsym $netmod+1 exec chromium mail.google.com
-bindsym $netmod+2 exec chromium www.google.com/calendar
-bindsym $netmod+3 exec chromium www.drive.google.com
-bindsym $netmod+4 exec chromium www.youtube.com
-bindsym $netmod+5 exec chromium www.vcu.edu
-bindsym $netmod+6 exec chromium www.facebook.com
-bindsym $netmod+7 exec chromium www.amazon.com
+bindsym $netmod+1 exec $browser mail.google.com
+bindsym $netmod+2 exec $browser www.google.com/calendar
+bindsym $netmod+3 exec $browser www.drive.google.com
+bindsym $netmod+4 exec $browser www.youtube.com
+bindsym $netmod+5 exec $browser www.vcu.edu
+bindsym $netmod+6 exec $browser www.facebook.com
+bindsym $netmod+7 exec $browser www.amazon.com
 
 
 # # # # # # # # # # # # # # # # # # #
@@ -129,6 +130,8 @@ bindsym $winmod+h focus left
 bindsym $winmod+j focus down
 bindsym $winmod+k focus up
 bindsym $winmod+l focus right
+
+bindsym $winmod+o open
 
 # move focused window
 bindsym $winmod+Shift+h move left
@@ -161,7 +164,6 @@ bindsym $winmod+space focus parent
 
 # focus the child container
 bindsym $winmod+Return focus child
-
 
 
 # # # # # # # # # # # # # # # # # # #
@@ -210,6 +212,10 @@ bindsym $winmod+ctrl+e move container to workspace e; workspace e
 bindsym $winmod+ctrl+a move container to workspace a; workspace a
 bindsym $winmod+ctrl+s move container to workspace s; workspace s
 bindsym $winmod+ctrl+d move container to workspace d; workspace d
+
+# Make a window show up on all workspaces
+# ONLY WORKS ON FLOATING
+#sticky toggle
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

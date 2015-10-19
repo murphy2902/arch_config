@@ -1,13 +1,16 @@
+#!/bin/bash
 # ~/.bashrc
 
-export XDG_CACHE_HOME="/home/ryan/.cache"
-export XDG_CONFIG_HOME="/home/ryan/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local"
 
 export BROWSER="chromium"
 export EDITOR="vim"
 export EMAIL="murphy2902@gmail.com"
 export GIMP2_DIRECTORY="$XDG_CONFIG_HOME/gimp-2.8"
-export GNUPGHOME="$XDG_CONFIG_HOME"
+export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
 export PGPPATH="$GNUPGHOME/"
 export XAUTHORITY="$XDG_CONFIG_HOME/x/.Xauthority"
 export XINITRC="$XDG_CONFIG_HOME/x/.xinitrc"
@@ -63,9 +66,9 @@ alias gitpom='git push origin master'
 alias copyycm='cp ~/.config/vim/.ycm_extra_conf.py .'
 
 
-######################################################
+# # # # # # # # # # # # # #
 #  Customization
-######################################################
+# # # # # # # # # # # # # #
 
 #PS1='[\u@\h \W]\$' #DEFAULTj
 PS1=' > '

@@ -41,13 +41,8 @@ hi FoldColumn    term=NONE cterm=NONE ctermfg=White       ctermbg=NONE gui=NONE
 "hi cssDefinition
 
 " perl
-"hi link perlBraces             
-"hi perlRepeat            
-"hi perlStatementFiledesc 
-"hi perlStatementRegexp  
-"hi perlMatchStartEnd   
-"hi perlVarMember      
-hi perlsharpbang term=NONE cterm=NONE ctermfg=Magenta     ctermbg=NONE gui=NONE
+
+hi link perlsharpbang special
 hi link perlfunctionname type   
 hi link perlstatementstorage type
 hi link perlstatementcontrol special
@@ -55,15 +50,17 @@ hi link perlspecialstring constant
 hi link perlsubname perlfunctionname
 hi link perlvarplain nontext
 hi link perlvarplain2 perlvarplain 
+hi link perlfiledescstatement special
+hi link perlfiledescread perlfiledescstatement
 
 " sass
 
 hi sassControl       term=NONE cterm=NONE ctermfg=DarkBlue    ctermbg=NONE gui=NONE
 hi sassFunctionDecl  term=NONE cterm=NONE ctermfg=DarkBlue    ctermbg=NONE gui=NONE
 hi sassFunctionName  term=NONE cterm=NONE ctermfg=DarkBlue    ctermbg=NONE gui=NONE
-"hi sassVariable
 
 " bash
+
 hi link shvariable nontext
 hi link shderefvar shvariable
 hi link shoption operator
@@ -73,3 +70,15 @@ hi link shquote constant
 " vim
 
 hi link vimOption nontext
+
+" Octave
+
+hi link octaveFunction statement
+hi link octavearithmeticoperator operator
+hi link octavequeryvar nontext
+hi link octaveuservar nontext
+
+" Python
+
+hi link pythonfunction type
+
