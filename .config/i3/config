@@ -1,29 +1,30 @@
 # Set my variables.  Mod4 is windows button, 3 is caps lock, 2 is right ctrl
+# I use xmodmap to set this
 set $exmod  Mod4
 set $winmod Mod3
 set $netmod Mod2
 
+# Set the gaps between windows.  This is for i3-gaps only
 set $gapsinner 22
 set $gapsouter 48
 
+# Here is where I set all of my default programs
 set $browser firefox
-
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-
-# Use Mouse+$exmod to drag floating windows to their wanted position
-floating_modifier $winmod
+set $email thunderbird
+set $term uxterm
 
 # Setting up my shadows, and a custom config location to match the others.
 exec compton --config ${XDG_CONFIG_HOME}/compton/config -cb 
 
-hide_edge_borders both
-new_window pixel 1
-
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below. ISO 10646 = Unicode
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# Use Mouse+$exmod to drag floating windows to their wanted position
+floating_modifier $winmod
 gaps inner $gapsinner
 gaps outer $gapsouter
-
+hide_edge_borders both
+new_window pixel 1
 workspace_auto_back_and_forth yes
 
 # This makes it so that anything spawned with the class "Floating" will be...floating.
@@ -32,7 +33,6 @@ workspace_auto_back_and_forth yes
 # Note: -class is a modifier specifically for xterm.  Other methods must
 # be used to change the class of other applications.
 for_window [class="Floating"] floating enable
-
 for_window [class="Octave"] floating enable
 
 # # # # # # # # # # # # # # # # # #
@@ -43,21 +43,18 @@ for_window [class="Octave"] floating enable
 
 bindsym $exmod+1            exec $browser
 bindsym $exmod+2            exec pcmanfm
-bindsym $exmod+3            exec xterm -e vim -u ${XDG_CONFIG_HOME}/vim/vimrc.conf
-bindsym $exmod+4            exec xterm -class Floating -e ncmpcpp 
-bindsym $exmod+5            exec xterm -e screen irssi --home=${XDG_CONFIG_HOME}/irssi
+bindsym $exmod+3            exec $term -e vim -u ${XDG_CONFIG_HOME}/vim/vimrc.conf
+bindsym $exmod+4            exec $term -class Floating -e ncmpcpp 
+bindsym $exmod+5            exec $term -e screen irssi --home=${XDG_CONFIG_HOME}/irssi
 bindsym $exmod+a            exec arandr
 bindsym $exmod+d            exec --no-startup-id i3-dmenu-desktop
 bindsym $exmod+e            exec eclipse
 bindsym $exmod+j            exec scrot -s
+bindsym $exmod+m            exec $email
 bindsym $exmod+n            exec nitrogen
-bindsym $exmod+s            exec android-studio
 bindsym $exmod+v            exec vlc
-bindsym $exmod+Return       exec xterm
-bindsym $exmod+Shift+Return exec xterm -class Floating
-
-# Lock the screen
-bindsym $exmod+l exec ~/documents/projects/desktop/lock.sh
+bindsym $exmod+Return       exec $term
+bindsym $exmod+Shift+Return exec $term -class Floating
 
 # Kill the focused window
 bindsym $exmod+Shift+q      kill
@@ -155,6 +152,8 @@ bindsym $winmod+c layout toggle split
 
 # toggle tiling / floating
 bindsym $winmod+Shift+space floating toggle
+
+bindsym $winmod+n sticky enable
 
 # change focus between tiling / floating windows
 bindsym $winmod+m focus mode_toggle
