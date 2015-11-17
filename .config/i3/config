@@ -34,6 +34,8 @@ workspace_auto_back_and_forth yes
 # be used to change the class of other applications.
 for_window [class="Floating"] floating enable
 for_window [class="Octave"] floating enable
+for_window [class="weka-gui-GUIChooser"] floating enable
+for_window [window_role="Msgcompose"] floating enable
 
 # # # # # # # # # # # # # # # # # #
 #

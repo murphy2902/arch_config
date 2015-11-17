@@ -8,6 +8,7 @@ let g:colors_name = "haruko"
 hi Comment       term=NONE cterm=NONE ctermfg=DarkGrey    ctermbg=NONE gui=NONE
 hi Constant      term=NONE cterm=NONE ctermfg=DarkRed     ctermbg=NONE gui=NONE
 hi Cursor        term=NONE cterm=NONE ctermfg=LightGrey   ctermbg=NONE gui=NONE
+hi Function      term=NONE cterm=NONE ctermfg=DarkGreen   ctermbg=NONE gui=NONE
 hi Identifier    term=NONE cterm=NONE ctermfg=DarkRed     ctermbg=NONE gui=NONE
 hi Normal        term=NONE cterm=NONE ctermfg=White       ctermbg=NONE gui=NONE
 hi NonText       term=NONE cterm=NONE ctermfg=DarkBlue    ctermbg=NONE gui=NONE
@@ -56,8 +57,8 @@ hi link perlfiledescread perlfiledescstatement
 " sass
 
 hi sassControl       term=NONE cterm=NONE ctermfg=DarkBlue    ctermbg=NONE gui=NONE
-hi sassFunctionDecl  term=NONE cterm=NONE ctermfg=DarkBlue    ctermbg=NONE gui=NONE
-hi sassFunctionName  term=NONE cterm=NONE ctermfg=DarkBlue    ctermbg=NONE gui=NONE
+hi link sassFunctionDecl function
+hi link sassFunctionName function
 
 " bash
 
@@ -66,10 +67,6 @@ hi link shderefvar shvariable
 hi link shoption operator
 hi link shtestopr operator
 hi link shquote constant
-
-" vim
-
-hi link vimOption nontext
 
 " Octave
 
@@ -82,3 +79,9 @@ hi link octaveuservar nontext
 
 hi link pythonfunction type
 
+" vim
+
+hi link vimftoption nontext 
+hi link vimOption nontext
+hi link vimuserfunc function
+"hi link vimsetequal operator

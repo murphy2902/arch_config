@@ -5,8 +5,13 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local"
 
+export WEKAHOME="/usr/share/java/weka"
+export PATH=$WEKAHOME/:$PATH
+
 export BROWSER="chromium"
+export CLASSPATH=/usr/share/java/weka/weka.jar:$CLASSPATH
 export EDITOR="vim"
+export SUDO_EDITOR="rvim"
 export EMAIL="murphy2902@gmail.com"
 export GIMP2_DIRECTORY="$XDG_CONFIG_HOME/gimp-2.8"
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
@@ -72,3 +77,5 @@ alias copyycm='cp ~/.config/vim/.ycm_extra_conf.py .'
 
 #PS1='[\u@\h \W]\$' #DEFAULTj
 PS1=' > '
+# Set shell to vi mode
+set -o vi

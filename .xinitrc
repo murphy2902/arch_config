@@ -21,7 +21,7 @@ fi
 
 #/usr/bin/xscreensaver -no-splash &
 
-#mpd $XDG_CONFIG_HOME/mpd/mpd.conf &&
+mopidy &
 #mpdscribble --conf $XDG_CONFIG_HOME/mpdscribble/mpdscribble.conf &
 
 exec i3
