@@ -174,7 +174,6 @@ bindsym $winmod+Return focus child
 # # # # # # # # # # # # # # # # # # #
 
 
-
 # switch to workspace
 bindsym $winmod+1 workspace 1
 bindsym $winmod+2 workspace 2
