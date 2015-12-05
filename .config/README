@@ -1,0 +1,9 @@
+Someday I will set this up with a makefile and everything.  For now, make sure you configure your system to work with the files.  Some of them are tricky.  The only two files you need in ~/ are .zprofile, .bash_profile, and .xinitrc.  I'll add notes someday too ;)
+
+TODO:
+
+Makefile to put everything in it's place
+	check for device names, such as wlo1 v wlp2s0, bat0 v bat1, etc
+make a sh directory to put all overlapping code between bash and zsh, for compatability.
+	make sure that it works with other shells too, shell ambiguous
+
