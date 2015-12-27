@@ -7,6 +7,7 @@ let g:colors_name = "haruko"
 
 if( &t_Co >= 255 || $TERM =~? "256color" )
 	hi Comment       term=none cterm=none ctermfg=DarkGrey    ctermbg=none
+	hi ColorColumn   term=none cterm=none ctermfg=none        ctermbg=DarkGrey
 	hi Constant      term=none cterm=none ctermfg=DarkRed     ctermbg=none
 	hi Cursor        term=none cterm=none ctermfg=LightGrey   ctermbg=none
 	hi DiffAdd       term=none cterm=none ctermfg=Green       ctermbg=none
@@ -41,6 +42,13 @@ if( &t_Co >= 255 || $TERM =~? "256color" )
 	hi WarningMsg    term=none cterm=none ctermfg=red         ctermbg=none
 	"hi WildMenu
 endif
+
+" C
+
+hi link cbraces normal
+hi link cdelimiter normal
+hi link cstorageclass nontext
+hi link ctype type
 
 " css
 

@@ -6,4 +6,7 @@ Makefile to put everything in it's place
 	check for device names, such as wlo1 v wlp2s0, bat0 v bat1, etc
 make a sh directory to put all overlapping code between bash and zsh, for compatability.
 	make sure that it works with other shells too, shell ambiguous
-
+Add a vlc small video command to i3
+	sticky and send to top corner
+	force small size
+	auto open movie dialogue
