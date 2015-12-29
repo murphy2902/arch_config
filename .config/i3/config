@@ -50,6 +50,7 @@ bindsym $exmod+4            exec $term -class Floating -e ncmpcpp
 bindsym $exmod+5            exec $term -e screen irssi --home=${XDG_CONFIG_HOME}/irssi
 bindsym $exmod+a            exec arandr
 bindsym $exmod+d            exec --no-startup-id i3-dmenu-desktop
+bindsym $exmod+c            exec chromium
 bindsym $exmod+e            exec eclipse
 bindsym $exmod+j            exec scrot -s
 bindsym $exmod+m            exec $email
