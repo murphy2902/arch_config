@@ -139,6 +139,12 @@ bindsym $winmod+Shift+j move down
 bindsym $winmod+Shift+k move up
 bindsym $winmod+Shift+l move right
 
+# move focused window more
+bindsym $winmod+Ctrl+h move left 30 px
+bindsym $winmod+Ctrl+j move down 30 px
+bindsym $winmod+Ctrl+k move up 30 px
+bindsym $winmod+Ctrl+l move right 30 px
+
 # split in horizontal orientation
 bindsym $winmod+u split h
 
@@ -220,17 +226,23 @@ bindsym $winmod+ctrl+d move container to workspace d; workspace d
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+	# These bindings trigger as soon as you enter the resize mode
 
-        # same bindings, but for the arrow keys
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+	# Resize the focused window
+	bindsym h resize shrink width 10 px or 10 ppt
+	bindsym j resize grow height 10 px or 10 ppt
+	bindsym k resize shrink height 10 px or 10 ppt
+	bindsym l resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+	# Resize the focused window more
+	bindsym Shift+h resize shrink width 50 px or 50 ppt
+	bindsym Shift+j resize grow height 50 px or 50 ppt
+	bindsym Shift+k resize shrink height 50 px or 50 ppt
+	bindsym Shift+l resize grow width 50 px or 50 ppt
+
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 
 bindsym $winmod+r mode "resize"
