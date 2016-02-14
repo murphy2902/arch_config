@@ -11,7 +11,6 @@ set $gapsouter 48
 # Here is where I set all of my default programs
 set $browser firefox
 set $email thunderbird
-set $term uxterm
 
 # Setting up my shadows, and a custom config location to match the others.
 exec compton --config ${XDG_CONFIG_HOME}/compton/config -cb 
@@ -37,17 +36,16 @@ for_window [class="Octave"] floating enable
 for_window [title="Weka GUI Chooser"] floating enable
 for_window [window_role="Msgcompose"] floating enable
 
-# # # # # # # # # # # # # # # # # #
-#
-#     Application Stuff
-#
-# # # # # # # # # # # # # # # # # #
+
+# Application Stuff
+# # #
+
 
 bindsym $exmod+1            exec $browser
 bindsym $exmod+2            exec pcmanfm
-bindsym $exmod+3            exec $term -e vim -u ${XDG_CONFIG_HOME}/vim/vimrc.conf
-bindsym $exmod+4            exec $term -class Floating -e ncmpcpp 
-bindsym $exmod+5            exec $term -e screen irssi --home=${XDG_CONFIG_HOME}/irssi
+bindsym $exmod+3            exec uxterm -e vim
+bindsym $exmod+4            exec uxterm -class Floating -e ncmpcpp
+bindsym $exmod+5            exec uxterm -e screen irssi --home=${XDG_CONFIG_HOME}/irssi
 bindsym $exmod+a            exec arandr
 bindsym $exmod+d            exec --no-startup-id i3-dmenu-desktop
 bindsym $exmod+c            exec chromium
@@ -56,8 +54,8 @@ bindsym $exmod+j            exec scrot -s
 bindsym $exmod+m            exec $email
 bindsym $exmod+n            exec nitrogen
 bindsym $exmod+v            exec vlc
-bindsym $exmod+Return       exec $term
-bindsym $exmod+Shift+Return exec $term -class Floating
+bindsym $exmod+Return       exec uxterm -e tmux
+bindsym $exmod+Shift+Return exec uxterm -class Floating -e tmux
 
 # Kill the focused window
 bindsym $exmod+Shift+q      kill
