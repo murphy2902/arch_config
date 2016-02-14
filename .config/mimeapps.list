@@ -29,3 +29,4 @@ application/x-extension-xht=userapp-Firefox-G7524X.desktop;
 x-scheme-handler/mailto=userapp-Evolution-XSA45X.desktop;userapp-Thunderbird-LW416X.desktop;
 message/rfc822=userapp-Thunderbird-LW416X.desktop;
 image/jpeg=sxiv.desktop;
+application/octet-stream=chromium.desktop;firefox.desktop;
