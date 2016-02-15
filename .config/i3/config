@@ -41,7 +41,7 @@ for_window [window_role="Msgcompose"] floating enable
 # # #
 
 
-bindsym $exmod+1            exec $browser
+bindsym $exmod+1            exec firefox
 bindsym $exmod+2            exec pcmanfm
 bindsym $exmod+3            exec uxterm -e vim
 bindsym $exmod+4            exec uxterm -class Floating -e ncmpcpp
@@ -54,8 +54,8 @@ bindsym $exmod+j            exec scrot -s
 bindsym $exmod+m            exec $email
 bindsym $exmod+n            exec nitrogen
 bindsym $exmod+v            exec vlc
-bindsym $exmod+Return       exec uxterm -e tmux
-bindsym $exmod+Shift+Return exec uxterm -class Floating -e tmux
+bindsym $exmod+Return       exec uxterm
+bindsym $exmod+Shift+Return exec uxterm -class Floating
 
 # Kill the focused window
 bindsym $exmod+Shift+q      kill
