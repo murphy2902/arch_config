@@ -1,7 +1,7 @@
 # Set my variables.  Mod4 is windows button, 3 is caps lock, 2 is right ctrl
 # I use xmodmap to set this
 set $exmod  Mod4
-set $winmod Mod3
+set $winmod Mod1
 set $netmod Mod2
 
 # Set the gaps between windows.  This is for i3-gaps only
