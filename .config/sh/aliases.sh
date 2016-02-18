@@ -32,5 +32,4 @@ alias rm='rm -I'
 alias :q='exit' # Dammit vim
 alias :x='exit' # Dammit vim
 alias quit='exit'
-alias sl='sl'
-
+alias sl='ls'

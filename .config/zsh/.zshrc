@@ -89,5 +89,3 @@ alias copyycm='cp ~/.config/vim/.ycm_extra_conf.py .'
 
 #PS1='[\u@\h \W]\$' #DEFAULTj
 PS1=' > '
-# Set shell to vi mode
-set -o vi
