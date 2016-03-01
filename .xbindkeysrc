@@ -1,0 +1,125 @@
+###########################
+# xbindkeys configuration #
+###########################
+#
+# Version: 1.8.6
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+
+# The release modifier is not a standard X modifier, but you can
+# use it if you want to catch release events instead of press events
+
+# By defaults, xbindkeys does not pay attention with the modifiers
+# NumLock, CapsLock and ScrollLock.
+# Uncomment the lines above if you want to pay attention to them.
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+# set directly keycode (here control + f with my keyboard)
+#"xterm"
+#  c:41 + m:0x4
+
+# specify a mouse button
+#"xterm"
+#  control + b:2
+
+#
+## set directly keycode (here control+alt+mod2 + f with my keyboard)
+#"xterm"
+#  alt + c:0x29 + m:4 + mod2
+#
+## Control+Shift+a  release event starts rxvt
+#"rxvt"
+#  release+control+shift + a
+#
+## Control + mouse button 2 release event starts rxvt
+#"rxvt"
+#  Control + b:2 + Release
+
+
+# General Applications
+# # #
+
+
+"uxterm"
+	Mod4 + Return
+
+"uxterm -class Floating"
+	Shift+Mod4 + Return
+
+"firefox"
+	Mod4 + 1
+
+"pcmanfm"
+	Mod4 + 2
+
+"uxterm -e vim"
+	Mod4 + 3
+
+"uxterm -class Floating -e ncmpcpp"
+	Mod4 + 4
+
+"uxterm -e screen irssi --home=${XDG_CONFIG_HOME}/irssi"
+	Mod4 + 5
+
+"arandr"
+	Mod4 + a
+
+"--no-startup-id i3-dmenu-desktop"
+	Mod4 + d
+
+"chromium"
+	Mod4 + c
+
+"eclipse"
+	Mod4 + e
+
+"scrot -s"
+	Mod4 + j
+
+"nitrogen"
+	Mod4 + n
+
+"vlc"
+	Mod4 + v
+
+
+# Internet Shortcuts
+# # #
+
+
+"$BROWSER https://www.mail.google.com"
+	Mod2 + m
+
+"$BROWSER www.youtube.com"
+	Mod2 + v
+
+"$BROWSER www.google.com/calendar"
+	Mod2 + c
+
+"$BROWSER www.facebook.com"
+	Mod2 + f
+
+"$BROWSER www.drive.google.com"
+	Mod2 + 2
+
+##################################
+# End of xbindkeys configuration #
+##################################

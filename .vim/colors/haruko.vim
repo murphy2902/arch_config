@@ -97,7 +97,13 @@ hi link octaveuservar nontext
 
 hi link pythonfunction type
 
+" MRU
+" " "
+
+hi link MRUFileName nontext
+
 " vim
+" " "
 
 hi link vimftoption nontext
 hi link vimparensep text
@@ -106,6 +112,8 @@ hi link vimuserfunc function
 "hi link vimsetequal operator
 
 " xml
+" " "
+
 hi link xmlattrib nontext
 hi link xmltag statement
 

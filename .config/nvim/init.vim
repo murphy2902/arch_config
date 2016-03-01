@@ -1,43 +1,82 @@
-" vimrc.conf
+" init.vim
 " If you have any questions about my settings, remember to use :help <topic>
 
 runtime! archlinux.vim
 
-call plug#begin('~/.config/vim/plugged')
 
-" Go stuff
+" Plugin Manager
+" " "
+
+
+" set runtimepath^=$XDG_CONFIG_HOME/nvim/repos/github.com/Shougo/dein.vim
+
+" call dein#begin(expand('$XDG_CONFIG_HOME/nvim/'))
+" 
+" call dein#add('Shougo/dein.vim')
+" 
+" " Go stuff
+" call dein#add('fatih/vim-go')
+" 
+" call dein#add('nsf/gocode')
+" call dein#add('Shougo/deoplete.nvim')
+" call dein#add('Shougo/deoplete-go')
+" 
+" call dein#add('vim-airline/vim-airline')
+" call dein#add('vim-airline/vim-airline-themes')
+" call dein#add('Xuyuanp/nerdtree-git-plugin')
+" call dein#add('tpope/vim-fugitive') "Git features
+" call dein#add('Lokaltog/powerline-fonts') " Required by airline
+" call dein#add('scrooloose/nerdtree')
+" call dein#add('vim-scripts/mru.vim') "<leader>ru for recently used files
+" call dein#add('easymotion/vim-easymotion')
+" call dein#add('justinmk/vim-syntax-extra')
+" call dein#add('jvirtanen/vim-octave') "Extra octave highlighting
+" call dein#add('lilydjwg/colorizer') " Color rgb text
+" call dein#add('tpope/vim-endwise') "Automagically closes more stuff
+" call dein#add('vim-ruby/vim-ruby')
+" call dein#add('kien/rainbow_parentheses.vim')
+" 
+" call dein#end()
+" 
+" if dein#check_install()
+  " call dein#install()
+" endif
+
+if empty(glob(expand('$XDG_CONFIG_HOME/nvim/autoload/plug.vim')))
+  silent !curl -fLo $XDG_CONFIG_HOME/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
+call plug#begin(expand('$XDG_CONFIG_HOME/nvim/plugged'))
+
 Plug 'fatih/vim-go'
 
-Plug 'vim-airline/vim-airline' "Statusline
-Plug 'vim-airline/vim-airline-themes' "Statusline
-Plug 'majutsushi/tagbar'
-Plug 'easymotion/vim-easymotion' "<leader><leader> motions
-Plug 'garbas/vim-snipmate' " Automagically completes code blocks
-Plug 'honza/vim-snippets' " Required by snipmate
-Plug 'justinmk/vim-syntax-extra' " More syntax highlighting
-Plug 'jvirtanen/vim-octave' "Extra octave highlighting
-Plug 'Lokaltog/powerline-fonts' " Required by airline
-Plug 'lilydjwg/colorizer' " Color rgb text
-Plug 'MarcWeber/vim-addon-mw-utils' " Required by snipmate
-Plug 'scrooloose/nerdtree'
-Plug 'tomtom/tlib_vim' " Required by snipmate
-Plug 'tpope/vim-endwise' "Automagically closes more stuff
-Plug 'tpope/vim-surround' "Surround text with tags and others
-Plug 'tpope/vim-fugitive' "Git features
-Plug 'vim-ruby/vim-ruby'
-Plug 'vim-scripts/mru.vim' "<leader>ru for recently used files
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive' "Git features
+Plug 'Lokaltog/powerline-fonts' " Required by airline
+Plug 'scrooloose/nerdtree'
+Plug 'vim-scripts/mru.vim' "<leader>ru for recently used files
+Plug 'easymotion/vim-easymotion'
+Plug 'justinmk/vim-syntax-extra'
+Plug 'jvirtanen/vim-octave' "Extra octave highlighting
+Plug 'lilydjwg/colorizer' " Color rgb text
+Plug 'tpope/vim-endwise' "Automagically closes more stuff
+Plug 'vim-ruby/vim-ruby'
 Plug 'kien/rainbow_parentheses.vim'
 
 call plug#end()
-
 
 " Abbreviations
 " " "
 
 
 au FileType java,c,cpp abbrev if if() {<CR><CR>}<esc>kkw
-au FileType java,c,cpp abbrev while while() {<CR><CR>}<esc>kkw
+au FileType java,c,cpp,perl abbrev while while() {<CR><CR>}<esc>kkw
 au FileType java,c,cpp abbrev for for() {<CR><CR>}<esc>kkwa
 au FileType java,c,cpp abbrev /*<CR> /*<CR> *<CR> */<esc>kA
 au FileType vim abbrev =header= "<CR>" " "<esc>kA
@@ -49,6 +88,8 @@ au FileType vim abbrev =header= "<CR>" " "<esc>kA
 
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au BufNewFile * call LoadTemplate()
+
+au FileType sh,bash,perl,python,ruby nno <leader>ex :! chmod +x %<CR>
 
 
 " Colors
@@ -93,6 +134,10 @@ nno <C-BS> bdw
 " Return to visual selection when indenting
 vno < <gv
 vno > >gv
+
+" Run files from vim
+au FileType perl nno <leader><CR> :! perl %<CR>
+au FileType perl nno <leader>'<CR> :! perl %
 
 " Precision editing
 nno <leader>c :set cul! cuc! rnu! spell!<cr>
@@ -222,6 +267,13 @@ function! MyOverride(...)
    return 1 "tells the pipeline to write the statusline with the builder
 endfunction
 call airline#add_statusline_func('MyOverride')
+
+
+" Deoplete
+" " "
+
+
+let g:deoplete#enable_at_startup = 1
 
 
 " Eclim

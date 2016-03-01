@@ -1,7 +1,7 @@
 # Set my variables.  Mod4 is windows button, 3 is caps lock, 2 is right ctrl
 # I use xmodmap to set this
 set $exmod  Mod4
-set $winmod Mod1
+set $winmod Mod3
 set $netmod Mod2
 
 # Set the gaps between windows.  This is for i3-gaps only
@@ -13,7 +13,7 @@ set $browser firefox
 set $email thunderbird
 
 # Setting up my shadows, and a custom config location to match the others.
-exec compton --config ${XDG_CONFIG_HOME}/compton/config -cb 
+exec compton --config ${XDG_CONFIG_HOME}/compton/config -cb
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -35,30 +35,32 @@ for_window [class="Floating"] floating enable
 for_window [class="Octave"] floating enable
 for_window [title="Weka GUI Chooser"] floating enable
 for_window [window_role="Msgcompose"] floating enable
+for_window [window_role="pop-up"] floating enable
 
 
 # Application Stuff
 # # #
 
+# I recently switched to xbindkeys
 
-bindsym $exmod+1            exec firefox
-bindsym $exmod+2            exec pcmanfm
-bindsym $exmod+3            exec uxterm -e vim
-bindsym $exmod+4            exec uxterm -class Floating -e ncmpcpp
-bindsym $exmod+5            exec uxterm -e screen irssi --home=${XDG_CONFIG_HOME}/irssi
-bindsym $exmod+a            exec arandr
-bindsym $exmod+d            exec --no-startup-id i3-dmenu-desktop
-bindsym $exmod+c            exec chromium
-bindsym $exmod+e            exec eclipse
-bindsym $exmod+j            exec scrot -s
-bindsym $exmod+m            exec $email
-bindsym $exmod+n            exec nitrogen
-bindsym $exmod+v            exec vlc
-bindsym $exmod+Return       exec uxterm
-bindsym $exmod+Shift+Return exec uxterm -class Floating
+#bindsym $exmod+1            exec firefox
+#bindsym $exmod+2            exec pcmanfm
+#bindsym $exmod+3            exec uxterm -e vim
+#bindsym $exmod+4            exec uxterm -class Floating -e ncmpcpp
+#bindsym $exmod+5            exec uxterm -e screen irssi --home=${XDG_CONFIG_HOME}/irssi
+#bindsym $exmod+a            exec arandr
+#bindsym $exmod+d            exec --no-startup-id i3-dmenu-desktop
+#bindsym $exmod+c            exec chromium
+#bindsym $exmod+e            exec eclipse
+#bindsym $exmod+j            exec scrot -s
+#bindsym $exmod+m            exec $email
+#bindsym $exmod+n            exec nitrogen
+#bindsym $exmod+v            exec vlc
+#bindsym $exmod+Return       exec uxterm
+#bindsym $exmod+Shift+Return exec uxterm -class Floating
 
 # Kill the focused window
-bindsym $exmod+Shift+q      kill
+bindsym $exmod+Shift+q kill
 
 # reload the configuration file
 bindsym $exmod+Shift+c reload
@@ -70,11 +72,9 @@ bindsym $exmod+Shift+r restart
 bindsym $exmod+Shift+e exec i3-msg exit
 
 
-# # # # # # # # # # # # # # # # # # #
-#
-#     Color Stuff
-#
-# # # # # # # # # # # # # # # # # # #
+# Color Stuff
+# # #
+
 
 # class                 border  backgr. text    indicator
 client.focused          #000000 #eae9da #000000 #eae9da
@@ -84,27 +84,21 @@ client.urgent           #000000 #9b6465 #ffffff #9b6465
 client.placeholder      #000000 #ffffff #ffffff #000000
 
 
-# # # # # # # # # # # # # # # # # # #
-#
-#     Internet Stuff
-#
-# # # # # # # # # # # # # # # # # # #
- 
-
-bindsym $netmod+1 exec $browser mail.google.com
-bindsym $netmod+2 exec $browser www.google.com/calendar
-bindsym $netmod+3 exec $browser www.drive.google.com
-bindsym $netmod+4 exec $browser www.youtube.com
-bindsym $netmod+5 exec $browser www.vcu.edu
-bindsym $netmod+6 exec $browser www.facebook.com
-bindsym $netmod+7 exec $browser www.amazon.com
+# Internet Stuff
+# # #
 
 
-# # # # # # # # # # # # # # # # # # #
-#
-#     Music Stuff
-#
-# # # # # # # # # # # # # # # # # # #
+# bindsym $netmod+1 exec $browser mail.google.com
+# bindsym $netmod+2 exec $browser www.google.com/calendar
+# bindsym $netmod+3 exec $browser www.drive.google.com
+# bindsym $netmod+4 exec $browser www.youtube.com
+# bindsym $netmod+5 exec $browser www.vcu.edu
+# bindsym $netmod+6 exec $browser www.facebook.com
+# bindsym $netmod+7 exec $browser www.amazon.com
+
+
+#  Music Stuff
+# # #
 
 
 bindsym XF86AudioRaiseVolume exec amixer set Master 5+
@@ -112,11 +106,8 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5-
 bindsym XF86AudioMute        exec amixer set Master toggle
 
 
-# # # # # # # # # # # # # # # # # # #
-#
-#     Window Stuff 
-#
-# # # # # # # # # # # # # # # # # # #
+# Window Stuff
+# # #
 
 
 # Toggle gaps
@@ -129,46 +120,37 @@ bindsym $winmod+j focus down
 bindsym $winmod+k focus up
 bindsym $winmod+l focus right
 
+# This opens a blank window
 bindsym $winmod+o open
 
-# move focused window
 bindsym $winmod+Shift+h move left
 bindsym $winmod+Shift+j move down
 bindsym $winmod+Shift+k move up
 bindsym $winmod+Shift+l move right
 
-# move focused window more
 bindsym $winmod+Ctrl+h move left 30 px
 bindsym $winmod+Ctrl+j move down 30 px
 bindsym $winmod+Ctrl+k move up 30 px
 bindsym $winmod+Ctrl+l move right 30 px
 
-# split in horizontal orientation
 bindsym $winmod+u split h
-
-# split in vertical orientation
 bindsym $winmod+i split v
 
-# enter fullscreen mode for the focused container
 bindsym $winmod+f fullscreen
 
-# change container layout (stacked, tabbed, toggle split)
 bindsym $winmod+z layout stacking
 bindsym $winmod+x layout tabbed
 bindsym $winmod+c layout toggle split
 
-# toggle tiling / floating
 bindsym $winmod+Shift+space floating toggle
 
+# Make a window persistent across workspaces
 bindsym $winmod+n sticky enable
 
 # change focus between tiling / floating windows
 bindsym $winmod+m focus mode_toggle
 
-# focus the parent container
 bindsym $winmod+space focus parent
-
-# focus the child container
 bindsym $winmod+Return focus child
 
 
@@ -241,6 +223,7 @@ mode "resize" {
 	# back to normal: Enter or Escape
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
+	bindsym F15 mode "default"
 }
 
 bindsym $winmod+r mode "resize"
@@ -249,22 +232,22 @@ bindsym $winmod+r mode "resize"
 # finds out, if available)
 bar {
 	position bottom
-   status_command i3status --config ~/.config/i3status/config
-   mode hide     
-   hidden_state hide
-   modifier $winmod
-   wheel_up_cmd nop
-   wheel_down_cmd nop
-   font Droid Sans Mono for Powerline:style=Regular:size=9:antialias=true
+	status_command i3status --config ~/.config/i3status/config
+	mode hide
+	hidden_state hide
+	modifier $winmod
+	wheel_up_cmd nop
+	wheel_down_cmd nop
+	font Droid Sans Mono for Powerline:style=Regular:size=9:antialias=true
 
-   colors {
-      background #30363b
-      statusline #eae9da
-      separator  #eae9ada
+	colors {
+		background #30363b
+		statusline #eae9da
+		separator  #eae9ada
 
-      focused_workspace  #30363b #30363b #4e9ab7
-      active_workspace   #30363b #30363b #4e9ab7
-      inactive_workspace #30363b #30363b #eae9da
-      urgent_workspace   #9b6465 #30363b #eae9da
-   }
+		focused_workspace  #30363b #30363b #4e9ab7
+		active_workspace   #30363b #30363b #4e9ab7
+		inactive_workspace #30363b #30363b #eae9da
+		urgent_workspace   #9b6465 #30363b #eae9da
+	}
 }

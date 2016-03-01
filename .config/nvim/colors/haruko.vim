@@ -5,7 +5,6 @@ if exists("syntax_on")
 endif
 let g:colors_name = "haruko"
 
-if( &t_Co >= 255 || $TERM =~? "256color" )
    hi Comment       term=none cterm=none ctermfg=DarkGrey    ctermbg=none
    hi ColorColumn   term=none cterm=none ctermfg=none        ctermbg=DarkGrey
    hi Constant      term=none cterm=none ctermfg=DarkRed     ctermbg=none
@@ -36,7 +35,6 @@ if( &t_Co >= 255 || $TERM =~? "256color" )
    hi Type          term=none cterm=none ctermfg=DarkGreen   ctermbg=none
    hi Visual        term=none cterm=none ctermfg=Yellow      ctermbg=none
    hi WarningMsg    term=none cterm=none ctermfg=red         ctermbg=none
-endif
 
 " Status stuff
 hi ErrorLine     term=none cterm=none ctermfg=Black          ctermbg=Red

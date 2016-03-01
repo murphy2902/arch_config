@@ -14,74 +14,25 @@ xterm*borderWidth     : 0
 xterm*colorBDMode     : true
 xterm*allowBoldFonts  : false
 
-! IBM --------------------------------------------------------
-
-!!Black + Dark Grey
-!*color0               : #141618
-!*color8               : #30363b
-!! Dark Red + Red
-!*color1               : #6f2111
-!*color9               : #9e2512
-!! DarkGreen + Green
-!*color2               : #bc7787
-!*color10              : #ffffff
-!! DarkYellow + Yellow
-!*color3               : #e99648
-!*color11              : #fdd29b
-!! DarkBlue + Blue
-!*color4               : #ffffff
-!*color12              : #ffffff
-!! DarkMagenta + Magenta
-!*color5               : #7a442f
-!*color13              : #ffffff
-!! DarkCyan + Cyan
-!*color6               : #ffffff
-!*color14              : #ffffff
-!! Light Grey + White
-!*color7               : #ffffff
-!*color15              : #fefdf0
-!!FMT Include, StatusLine, ErrorMsg
-!xterm*colorBD         : #ffffff
-!xterm*colorIT         : #ffffff
-!xterm*colorUL         : #ffffff
-!!TXT Normal, Normal, Cursor
-!xterm*foreground      : #fdd29b
-!xterm*background      : #23100d
-!xterm*cursorColor     : #fdd29b
-
-! Burning Fall--------------------------------------------------------
-
-!!Black + Dark Grey
-!*color0               : #0d120a
-!*color8               : #30363b
-!! Dark Red + Red
-!*color1               : #c15716
-!*color9               : #de8f91
-!! DarkGreen + Green
-!*color2               : #51ca7e
-!*color10              : #79de9e
-!! DarkYellow + Yellow
-!*color3               : #ffffff
-!*color11              : #fbd25d
-!! DarkBlue + Blue
-!*color4               : #b4bec4
-!*color12              : #65c8ed
-!! DarkMagenta + Magenta
-!*color5               : #9b6481
-!*color13              : #ffb2bd
-!! DarkCyan + Cyan
-!*color6               : #ffffff
-!*color14              : #ffffff
-!! Light Grey + White
-!*color7               : #a8a099
-!*color15              : #eee4dc
-!!FMT Include, StatusLine, ErrorMsg
-!xterm*colorBD         : #ffffff
-!xterm*colorIT         : #ffffff
-!xterm*colorUL         : #ffffff
-!!TXT Normal, Normal, Cursor
-!xterm*foreground      : #b19737
-!xterm*background      : #3d3f3f
-!xterm*cursorColor     : #b19737
-
-
+*color0 : #141618
+*color1 : #9b6465
+*color2 : #51ca7e
+*color3 : #eda757
+*color4 : #4e9ab7
+*color5 : #9b6481
+*color6 : #58488a
+*color7 : #bab9ad
+*color8 : #40464b
+*color9 : #de8f91
+*color10 : #79de9e
+*color11 : #fbd25d
+*color12 : #65c8ed
+*color13 : #ffb2bd
+*color14 : #eae9da
+*color15 : #eae9da
+xterm*colorBD : #ffffff
+xterm*colorIT : #fbd25d
+xterm*colorUL : #de8f91
+xterm*foreground : #eae9da
+xterm*background : #30363b
+xterm*cursorColor : #eae9da
