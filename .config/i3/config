@@ -6,15 +6,7 @@ set $netmod Mod2
 
 # Set the gaps between windows.  This is for i3-gaps only
 set $gapsinner 22
-set $gapsouter 48
-
-
-# Here is where I set all of my default programs
-set $browser firefox
-set $email thunderbird
-
-# Setting up my shadows, and a custom config location to match the others.
-exec compton --config ${XDG_CONFIG_HOME}/compton/config -cb
+set $gapsouter 22
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -36,29 +28,14 @@ for_window [class="Floating"] floating enable
 for_window [class="Octave"] floating enable
 for_window [title="Weka GUI Chooser"] floating enable
 for_window [window_role="Msgcompose"] floating enable
+for_window [title="tmp"] floating enable
+for_window [title="New Message"] floating enable
+for_window [title="Message"] floating enable
 for_window [window_role="pop-up"] floating enable
 
 
-# Application Stuff
-# # #
-
-# I recently switched to xbindkeys
-
-#bindsym $exmod+1            exec firefox
-#bindsym $exmod+2            exec pcmanfm
-#bindsym $exmod+3            exec uxterm -e vim
-#bindsym $exmod+4            exec uxterm -class Floating -e ncmpcpp
-#bindsym $exmod+5            exec uxterm -e screen irssi --home=${XDG_CONFIG_HOME}/irssi
-#bindsym $exmod+a            exec arandr
-#bindsym $exmod+d            exec --no-startup-id i3-dmenu-desktop
-#bindsym $exmod+c            exec chromium
-#bindsym $exmod+e            exec eclipse
-#bindsym $exmod+j            exec scrot -s
-#bindsym $exmod+m            exec $email
-#bindsym $exmod+n            exec nitrogen
-#bindsym $exmod+v            exec vlc
-#bindsym $exmod+Return       exec uxterm
-#bindsym $exmod+Shift+Return exec uxterm -class Floating
+# dmenu
+bindsym $exmod+d            exec --no-startup-id i3-dmenu-desktop
 
 # Kill the focused window
 bindsym $exmod+Shift+q kill
@@ -78,24 +55,11 @@ bindsym $exmod+Shift+e exec i3-msg exit
 
 
 # class                 border  backgr. text    indicator
-client.focused          #000000 #eae9da #000000 #eae9da
+client.focused          #ffffff #eae9da #000000 #eae9da
 client.focused_inactive #000000 #5f676a #ffffff #5f676a
-client.unfocused        #000000 #30363b #888888 #30363b
+client.unfocused        #000000 #5f676a #888888 #30363b
 client.urgent           #000000 #9b6465 #ffffff #9b6465
 client.placeholder      #000000 #ffffff #ffffff #000000
-
-
-# Internet Stuff
-# # #
-
-
-# bindsym $netmod+1 exec $browser mail.google.com
-# bindsym $netmod+2 exec $browser www.google.com/calendar
-# bindsym $netmod+3 exec $browser www.drive.google.com
-# bindsym $netmod+4 exec $browser www.youtube.com
-# bindsym $netmod+5 exec $browser www.vcu.edu
-# bindsym $netmod+6 exec $browser www.facebook.com
-# bindsym $netmod+7 exec $browser www.amazon.com
 
 
 #  Music Stuff
@@ -201,10 +165,6 @@ bindsym $winmod+ctrl+a move container to workspace a; workspace a
 bindsym $winmod+ctrl+s move container to workspace s; workspace s
 bindsym $winmod+ctrl+d move container to workspace d; workspace d
 
-# Make a window show up on all workspaces
-# ONLY WORKS ON FLOATING
-#sticky toggle
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
 	# These bindings trigger as soon as you enter the resize mode
@@ -234,7 +194,7 @@ bindsym $winmod+r mode "resize"
 bar {
 	position bottom
 	status_command i3status --config ~/.config/i3status/config
-	mode hide
+	mode dock
 	hidden_state hide
 	modifier $winmod
 	wheel_up_cmd nop
@@ -244,7 +204,7 @@ bar {
 	colors {
 		background #30363b
 		statusline #eae9da
-		separator  #eae9ada
+		separator  #eae9da
 
 		focused_workspace  #30363b #30363b #4e9ab7
 		active_workspace   #30363b #30363b #4e9ab7

@@ -13,6 +13,7 @@ application/x-extension-xht=userapp-Firefox-G7524X.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-LW416X.desktop
 message/rfc822=userapp-Thunderbird-LW416X.desktop
 image/jpeg=sxiv.desktop
+image/gif=sxiv.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-Firefox-G7524X.desktop;
@@ -29,4 +30,8 @@ application/x-extension-xht=userapp-Firefox-G7524X.desktop;
 x-scheme-handler/mailto=userapp-Evolution-XSA45X.desktop;userapp-Thunderbird-LW416X.desktop;
 message/rfc822=userapp-Thunderbird-LW416X.desktop;
 image/jpeg=sxiv.desktop;
+<<<<<<< HEAD
 application/octet-stream=chromium.desktop;firefox.desktop;
+=======
+image/gif=sxiv.desktop;
+>>>>>>> 0e6703c70c88bf4c42661eaad983220d84921a8b
