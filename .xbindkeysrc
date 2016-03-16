@@ -70,7 +70,7 @@
 "pcmanfm"
 	Mod4 + 2
 
-"uxterm -e vim"
+"nvim"
 	Mod4 + 3
 
 "uxterm -class Floating -e ncmpcpp"
@@ -82,9 +82,6 @@
 "arandr"
 	Mod4 + a
 
-"--no-startup-id i3-dmenu-desktop"
-	Mod4 + d
-
 "chromium"
 	Mod4 + c
 
@@ -93,6 +90,9 @@
 
 "scrot -s"
 	Mod4 + j
+
+"nylas"
+	Mod4 + m
 
 "nitrogen"
 	Mod4 + n
