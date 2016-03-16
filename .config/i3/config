@@ -8,6 +8,7 @@ set $netmod Mod2
 set $gapsinner 22
 set $gapsouter 48
 
+
 # Here is where I set all of my default programs
 set $browser firefox
 set $email thunderbird
