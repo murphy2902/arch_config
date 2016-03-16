@@ -34,3 +34,5 @@ alias :q='exit' # Dammit vim
 alias :x='exit' # Dammit vim
 alias quit='exit'
 alias sl='ls'
+
+alias lugcraft='ssh -L 25565:localhost:25565 murphyjr3@ouroboros.chpc.vcu.edu'

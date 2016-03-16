@@ -17,11 +17,14 @@ fi
 # X related script stuff
 [[ -f $XDG_CONFIG_HOME/x/colorscheme.sh ]] && . $XDG_CONFIG_HOME/x/colorscheme.sh
 
+
 # Running .Xresources
 [[ -f $XDG_CONFIG_HOME/x/.Xresources ]] && xrdb -merge $XDG_CONFIG_HOME/x/.Xresources
 
 #/usr/bin/xscreensaver -no-splash &
 
+nitrogen --restore
+xbindkeys &
 mopidy &
 #mpdscribble --conf $XDG_CONFIG_HOME/mpdscribble/mpdscribble.conf &
 
