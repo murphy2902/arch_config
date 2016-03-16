@@ -1,33 +1,34 @@
 #!/bin/bash
+
 # Black + DarkGrey
-COLOR_0="#141618"
-COLOR_8="#40464b"
+export COLOR_0="#141618"
+export COLOR_8="#40464b"
 # DarkRed + Red
-COLOR_1="#9b6465"
-COLOR_9="#de8f91"
+export COLOR_1="#9b6465"
+export COLOR_9="#de8f91"
 # DarkGreen + Green
-COLOR_2="#51ca7e"
-COLOR_10="#79de9e"
+export COLOR_2="#51ca7e"
+export COLOR_10="#79de9e"
 # DarkYellow + Yellow
-COLOR_3="#eda757"
-COLOR_11="#fbd25d"
+export COLOR_3="#eda757"
+export COLOR_11="#fbd25d"
 # DarkBlue + Blue
-COLOR_4="#4e9ab7"
-COLOR_12="#65c8ed"
+export COLOR_4="#4e9ab7"
+export COLOR_12="#65c8ed"
 # DarkMagenta + Magenta
-COLOR_5="#9b6481"
-COLOR_13="#ffb2bd"
+export COLOR_5="#9b6481"
+export COLOR_13="#ffb2bd"
 # DarkCyan + Cyan
-COLOR_6="#58488a"
-COLOR_14="#eae9da"
+export COLOR_6="#58488a"
+export COLOR_14="#eae9da"
 # Light Grey + White
-COLOR_7="#bab9ad"
-COLOR_15="#eae9da"
+export COLOR_7="#bab9ad"
+export COLOR_15="#eae9da"
 # Include, StatusLine, ErrorMsg
-COLOR_BD="#ffffff"
-COLOR_IT="#fbd25d"
-COLOR_UL="#de8f91"
+export COLOR_BD="#ffffff"
+export COLOR_IT="#fbd25d"
+export COLOR_UL="#de8f91"
 # Foreground, Background, Cursor
-COLOR_FORE="#eae9da"
-COLOR_BACK="#30363b"
-COLOR_CURS="#eae9da"
+export COLOR_FORE="#eae9da"
+export COLOR_BACK="#30363b"
+export COLOR_CURS="#eae9da"
