@@ -54,6 +54,10 @@ hi link ctype type
 "hi cssTextProp
 "hi cssDefinition
 
+" go
+
+hi link godirective preproc
+
 " perl
 
 hi link perlsharpbang special

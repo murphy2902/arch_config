@@ -8,40 +8,6 @@ runtime! archlinux.vim
 " " "
 
 
-" set runtimepath^=$XDG_CONFIG_HOME/nvim/repos/github.com/Shougo/dein.vim
-
-" call dein#begin(expand('$XDG_CONFIG_HOME/nvim/'))
-" 
-" call dein#add('Shougo/dein.vim')
-" 
-" " Go stuff
-" call dein#add('fatih/vim-go')
-" 
-" call dein#add('nsf/gocode')
-" call dein#add('Shougo/deoplete.nvim')
-" call dein#add('Shougo/deoplete-go')
-" 
-" call dein#add('vim-airline/vim-airline')
-" call dein#add('vim-airline/vim-airline-themes')
-" call dein#add('Xuyuanp/nerdtree-git-plugin')
-" call dein#add('tpope/vim-fugitive') "Git features
-" call dein#add('Lokaltog/powerline-fonts') " Required by airline
-" call dein#add('scrooloose/nerdtree')
-" call dein#add('vim-scripts/mru.vim') "<leader>ru for recently used files
-" call dein#add('easymotion/vim-easymotion')
-" call dein#add('justinmk/vim-syntax-extra')
-" call dein#add('jvirtanen/vim-octave') "Extra octave highlighting
-" call dein#add('lilydjwg/colorizer') " Color rgb text
-" call dein#add('tpope/vim-endwise') "Automagically closes more stuff
-" call dein#add('vim-ruby/vim-ruby')
-" call dein#add('kien/rainbow_parentheses.vim')
-" 
-" call dein#end()
-" 
-" if dein#check_install()
-  " call dein#install()
-" endif
-
 if empty(glob(expand('$XDG_CONFIG_HOME/nvim/autoload/plug.vim')))
   silent !curl -fLo $XDG_CONFIG_HOME/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -51,33 +17,30 @@ endif
 call plug#begin(expand('$XDG_CONFIG_HOME/nvim/plugged'))
 
 Plug 'fatih/vim-go'
-
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '$XDG_CONFIG_HOME/nvim/plugged/gocode/vim/symlink.sh' }
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tpope/vim-fugitive' "Git features
 Plug 'Lokaltog/powerline-fonts' " Required by airline
 Plug 'scrooloose/nerdtree'
-Plug 'vim-scripts/mru.vim' "<leader>ru for recently used files
+Plug 'scrooloose/syntastic'
+Plug 'vim-scripts/mru.vim' 
 Plug 'easymotion/vim-easymotion'
 Plug 'justinmk/vim-syntax-extra'
-Plug 'jvirtanen/vim-octave' "Extra octave highlighting
-Plug 'lilydjwg/colorizer' " Color rgb text
+Plug 'jvirtanen/vim-octave' 
+Plug 'lilydjwg/colorizer' 
 Plug 'tpope/vim-endwise' "Automagically closes more stuff
+Plug 'tpope/vim-fugitive' "Git features
 Plug 'vim-ruby/vim-ruby'
 Plug 'kien/rainbow_parentheses.vim'
 
 call plug#end()
 
+
 " Abbreviations
 " " "
 
-
-au FileType java,c,cpp abbrev if if() {<CR><CR>}<esc>kkw
-au FileType java,c,cpp,perl abbrev while while() {<CR><CR>}<esc>kkw
-au FileType java,c,cpp abbrev for for() {<CR><CR>}<esc>kkwa
 au FileType java,c,cpp abbrev /*<CR> /*<CR> *<CR> */<esc>kA
 au FileType vim abbrev =header= "<CR>" " "<esc>kA
 
@@ -87,8 +50,8 @@ au FileType vim abbrev =header= "<CR>" " "<esc>kA
 
 
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+au FileType go setlocal noexpandtab
 au BufNewFile * call LoadTemplate()
-
 au FileType sh,bash,perl,python,ruby nno <leader>ex :! chmod +x %<CR>
 
 
@@ -188,8 +151,7 @@ no <leader>Hn :split
 no j gj
 no k gk
 
-nno <leader>ru :MRU<CR>
-no <leader>ff :NERDTreeToggle<CR>
+nno <silent> <leader>ru :MRU<CR>
 nno <C-S-P> :call <SID>SynStack()<CR>
 
 nno <F15> <esc>
@@ -210,6 +172,7 @@ set cc=80
 set cmdheight=1
 set equalalways
 set encoding=utf8
+set exrc
 set ffs=unix,dos,mac
 set foldenable
 set foldmethod=marker
@@ -231,6 +194,7 @@ set notitle
 set novisualbell
 set nu
 set noruler
+set secure
 set shiftwidth=3
 set showmatch
 set smartindent
@@ -283,7 +247,6 @@ let g:deoplete#enable_at_startup = 1
 let g:EclimCompletionMethod = 'omnifunc'
 
 
-
 " MRU
 " " "
 
@@ -297,6 +260,7 @@ let MRU_Window_Height = 15
 " " "
 
 
+no <leader>ff :NERDTreeToggle<CR>
 " Closes vim if nerdtree is the only open window
 " Causes error on regular nerdtree close
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -321,6 +285,52 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+
+" Syntastic
+" " "
+
+
+let g:syntastic_perl_checkers = 'perl'
+let g:syntastic_enable_perl_checker = 1
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
+" vim-go
+" " "
+
+
+au FileType go nno <leader>grr <Plug>(go-run)
+au FileType go nno <leader>grt :GoRun<CR>
+au FileType go nno <Leader>grs <Plug>(go-run-split)
+au FileType go nno <Leader>grv <Plug>(go-run-vertical)
+au FileType go nno <leader>gb <Plug>(go-build)
+au FileType go nno <leader>gt <Plug>(go-test)
+au FileType go nno <leader>gc <Plug>(go-coverage)
+au FileType go nno <Leader>gds <Plug>(go-def-split)
+au FileType go nno <Leader>gdv <Plug>(go-def-vertical)
+au FileType go nno <Leader>gdt <Plug>(go-def-tab)
+au FileType go nno <Leader>gd <Plug>(go-doc)
+au FileType go nno <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nno <Leader>gb <Plug>(go-doc-browser)
+au FileType go nno <Leader>gs <Plug>(go-implements)
+au FileType go nno <Leader>gi <Plug>(go-info)
+au FileType go nno <Leader>ge <Plug>(go-rename)
+
+let g:go_fmt_command = "goimports"
+let g:go_fmt_fail_silently = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 " You Complete Me
 " " "

@@ -2,17 +2,17 @@
 ! 
 ! Note:  Dont forget that * is a wildcard
 
-xterm*faceName        : Droid Sans Mono for Powerline:style=Regular:size=9:antialias=true
-xterm*font            : 7x13
-xterm*faceSize        : 9
-xterm*saveLines       : 16384
-xterm*loginShell      : true
-xterm*charClass       : 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-xterm*termName        : uxterm
-xterm*eightBitInput   : false
-xterm*borderWidth     : 0
-xterm*colorBDMode     : true
-xterm*allowBoldFonts  : false
+*faceName        : Droid Sans Mono for Powerline:style=Regular:size=9:antialias=true
+*font            : 7x13
+*faceSize        : 9
+*saveLines       : 16384
+*loginShell      : true
+*charClass       : 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+*termName        : uxterm
+*eightBitInput   : false
+*borderWidth     : 0
+*colorBDMode     : true
+*allowBoldFonts  : false
 
 *color0 : #141618
 *color1 : #9b6465
