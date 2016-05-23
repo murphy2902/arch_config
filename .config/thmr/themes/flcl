@@ -1,0 +1,60 @@
+#!/bin/bash
+
+wallpaper=~/images/cooly.png
+
+
+# Colors
+# # #
+
+black="#141618"
+darkGrey="#40464b"
+darkRed="#9b6465"
+red="#de8f91"
+darkGreen="#51ca7e"
+green="#79de9e"
+darkYellow="#eda757"
+yellow="#fbd25d"
+darkBlue="#4e9ab7"
+blue="#65c8ed"
+darkMagenta="#9b6481"
+magenta="#ffb2bd"
+darkCyan="#58488a"
+cyan="#FFFFFF"
+lightGrey="#bab9ad"
+white="#eae9da"
+colorbd="#FFFFFF"
+colorit="#fbd25d"
+colorul="#de8f91"
+fore="#eae9da"
+back="#30363b"
+curs="#eae9da"
+
+
+# Fonts
+# # #
+
+font_foundry="misc"
+font_name="Droid Sans Mono for Powerline"
+font_weight="*"
+font_slant="*"
+font_sWdth="*"
+font_adstyl="*"
+font_pixel="*"
+font_point="*"
+font_resx="*"
+font_resy="*"
+font_spacing="*"
+font_avgwidth="*"
+font_registry="*"
+font_encoding="*"
+
+font_size=10
+font_style="Regular"
+
+boldFonts="false"
+
+
+# Terminal
+# # #
+
+borderwidth=0

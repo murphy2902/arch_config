@@ -1,0 +1,4 @@
+thmr_default=$XDG_CONFIG_HOME/thmr/default.sh
+
+wpcall="feh --bg-fill"
+
