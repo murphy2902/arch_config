@@ -23,7 +23,7 @@ fi
 
 #/usr/bin/xscreensaver -no-splash &
 
-nitrogen --restore
+thmr flcl
 xbindkeys &
 mopidy &
 #mpdscribble --conf $XDG_CONFIG_HOME/mpdscribble/mpdscribble.conf &
