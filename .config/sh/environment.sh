@@ -26,23 +26,4 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 # Scripts
 
-alias freehosts='sudo mv /etc/hosts /etc/toasts' # A toast to distraction!
-alias blockhosts='sudo mv /etc/toasts /etc/hosts' # And distraction's inevitable reply.
-# this probably isn't a good thing to have, but Arch's internet is wonky, so there.
-alias wpasupup='sudo wpa_supplicant -B -i wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
-alias mpkg='makepkg -scif' # This will probably be stupid when I install an AUR helper
-alias tartar='tar -xzvf' # There's an xkcd comic about this...
-alias please='sudo $(history -p !!)'
-alias again='clear; $(history -p !!)'
-alias gitpom='git push origin master'
-alias copyycm='cp ~/.config/vim/.ycm_extra_conf.py .'
-
-
-# # # # # # # # # # # # # #
-#  Customization
-# # # # # # # # # # # # # #
-
-#PS1='[\u@\h \W]\$' #DEFAULTj
 PS1=' > '
-# Set shell to vi mode
-set -o vi
