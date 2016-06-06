@@ -1,3 +1,5 @@
 [user]
-	email = murphy2902@gmail.com
-	name = Ryan Murphy
+	email = rymurphy@redhat.com
+	name = oatmealraisin
+[credential]
+	helper = cache

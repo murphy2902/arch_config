@@ -34,7 +34,7 @@ for_window [window_role="pop-up"] floating enable
 
 
 # dmenu
-bindsym $exmod+d            exec --no-startup-id dmenu_run
+bindsym $exmod+d exec --no-startup-id dmenu_run
 
 # Kill the focused window
 bindsym $exmod+Shift+q kill
