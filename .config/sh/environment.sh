@@ -6,7 +6,7 @@ export WEKAHOME="/usr/share/java/weka"
 export WEECHAT_HOME="$XDG_CONFIG_HOME/weechat"
 export PATH=$WEKAHOME/:$PATH
 
-export BROWSER="chromium"
+export BROWSER="icecat"
 export CLASSPATH=/usr/share/java/weka/weka.jar:$CLASSPATH
 export EDITOR="vim"
 export GOPATH=~/documents/projects/go
@@ -16,7 +16,6 @@ export EMAIL="murphy2902@gmail.com"
 export GIMP2_DIRECTORY="$XDG_CONFIG_HOME/gimp-2.8"
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
-export TERM="xterm-256color"
 export THEME="haruko"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
 export PGPPATH="$GNUPGHOME/"

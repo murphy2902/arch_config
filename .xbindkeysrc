@@ -82,7 +82,7 @@
 "arandr"
 	Mod4 + a
 
-"chromium"
+"$BROWSER"
 	Mod4 + c
 
 "eclipse"
