@@ -2,6 +2,6 @@
 	email = rymurphy@redhat.com
 	name = oatmealraisin
 [credential]
-	helper = cache
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+	helper = cache --timeout 3600
+#[url "git@github.com:"]
+#	insteadOf = https://github.com/
