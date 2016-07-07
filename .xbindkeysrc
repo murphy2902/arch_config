@@ -57,6 +57,7 @@
 # General Applications
 # # #
 
+# TODO: Find a way to use flags + generic stuff
 
 "uxterm"
 	Mod4 + Return
@@ -91,7 +92,7 @@
 "scrot -s"
 	Mod4 + j
 
-"nylas"
+"$APP_EMAIL"
 	Mod4 + m
 
 "nitrogen"
