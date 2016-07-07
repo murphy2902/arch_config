@@ -34,7 +34,7 @@ curs="#eae9da"
 # # #
 
 font_foundry="misc"
-font_name="Sauce Code Powerline"
+font_name="Roboto Mono for Powerline"
 font_weight="*"
 font_slant="*"
 font_sWdth="*"
@@ -58,3 +58,5 @@ boldFonts="false"
 # # #
 
 borderwidth=0
+clipboard="true"
+scrollBar="false"
