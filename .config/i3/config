@@ -1,3 +1,5 @@
+# TODO: Set fonts
+# TODO: Use Xresources
 # Set my variables.  Mod4 is windows button, 3 is caps lock, 2 is right ctrl
 # I use xmodmap to set this
 set $exmod  Mod4
@@ -10,7 +12,7 @@ set $gapsouter 22
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:DejaVu Sans Mono 0
 # Use Mouse+$exmod to drag floating windows to their wanted position
 floating_modifier $winmod
 gaps inner $gapsinner
