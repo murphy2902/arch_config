@@ -1,9 +1,16 @@
 [core]
-	editor='nvim'
+	excludesfile = /home/rymurphy/.config/git/gitignore_global
+	whitespace = trailing-space,space-before-tab,blank-at-eol,blank-at-eof
+	# Git should use $EDITOR instead
+	#editor='nvim'
+[credential]
+	helper = cache --timeout 3600
+[help]
+	autocorrect = 5
+[merge]
+	tool = meld
 [user]
 	email = rymurphy@redhat.com
 	name = oatmealraisin
-[credential]
-	helper = cache --timeout 3600
 #[url "git@github.com:"]
 #	insteadOf = https://github.com/
