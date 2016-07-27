@@ -8,7 +8,7 @@ export PATH=$WEKAHOME/:$PATH
 
 export BROWSER="firefox"
 export CLASSPATH=/usr/share/java/weka/weka.jar:$CLASSPATH
-export EDITOR="vim"
+export EDITOR="nvim"
 export GOPATH=~/documents/projects/go
 export PATH=$GOPATH/bin/:$PATH
 export SUDO_EDITOR="rvim"
