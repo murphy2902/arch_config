@@ -18,8 +18,8 @@ darkBlue="#4e9ab7"
 blue="#65c8ed"
 darkMagenta="#9b6481"
 magenta="#ffb2bd"
-darkCyan="#58488a"
-cyan="#FFFFFF"
+darkCyan="#65c8ed"
+cyan="#58488a"
 lightGrey="#bab9ad"
 white="#eae9da"
 colorbd="#FFFFFF"
@@ -48,7 +48,7 @@ font_avgwidth="*"
 font_registry="*"
 font_encoding="*"
 
-font_size=10
+font_size=12
 font_style="Regular"
 
 boldFonts="false"
