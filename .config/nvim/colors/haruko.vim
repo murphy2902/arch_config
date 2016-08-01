@@ -1,7 +1,7 @@
 set background=dark
 highlight clear
 if exists("syntax_on")
-   syntax reset
+	syntax reset
 endif
 let g:colors_name = "haruko"
 
@@ -33,14 +33,24 @@ hi Statement     term=none cterm=none ctermfg=LightGrey   ctermbg=none
 hi Title         term=none cterm=none ctermfg=White       ctermbg=none
 hi Todo          term=none cterm=none ctermfg=Black       ctermbg=Yellow
 hi Type          term=none cterm=none ctermfg=DarkGreen   ctermbg=none
+"hi VertSplit
 hi Visual        term=none cterm=none ctermfg=Yellow      ctermbg=none
+"hi VisualNOS
 hi WarningMsg    term=none cterm=none ctermfg=red         ctermbg=none
+"hi WildMenu
 
 " Status stuff
-hi ErrorLine     term=none cterm=none ctermfg=Black          ctermbg=Red
-hi StatusLine    term=none cterm=none ctermfg=Black          ctermbg=darkred
-hi StatusLine2   term=none cterm=none ctermfg=Black          ctermbg=darkgreen
-hi StatusLine3   term=none cterm=none ctermfg=Black          ctermbg=darkblue
+hi ErrorLine       term=none cterm=none ctermfg=Black ctermbg=Red
+hi StatusLine      term=none cterm=none ctermfg=Black ctermbg=darkred
+hi StatusLine2     term=none cterm=none ctermfg=Black ctermbg=darkgreen
+hi StatusLine3     term=none cterm=none ctermfg=Black ctermbg=darkblue
+
+hi tab     term=none cterm=none ctermfg=Black ctermbg=darkblue
+hi tabsel  term=none cterm=none ctermfg=Black ctermbg=blue
+hi tabtype term=none cterm=none ctermfg=Black ctermbg=darkgreen
+hi tabfill term=none cterm=none ctermfg=Black
+hi tabmod  term=none cterm=none ctermfg=Black ctermbg=yellow
+hi tabhid  term=none cterm=none ctermfg=white
 
 " C
 
@@ -53,10 +63,6 @@ hi link ctype type
 
 "hi cssTextProp
 "hi cssDefinition
-
-" go
-
-hi link godirective preproc
 
 " perl
 
@@ -73,7 +79,7 @@ hi link perlfiledescread special
 
 " sass
 
-hi sassControl       term=none cterm=none ctermfg=DarkBlue    ctermbg=none gui=none
+hi sassControl term=none cterm=none ctermfg=DarkBlue    ctermbg=none gui=none
 hi link sassFunctionDecl function
 hi link sassFunctionName function
 
@@ -84,9 +90,6 @@ hi link shderefvar shvariable
 hi link shoption operator
 hi link shtestopr operator
 hi link shquote constant
-
-" javascript
-hi link javascriptidentifier nontext
 
 " Octave
 

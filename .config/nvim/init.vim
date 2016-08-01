@@ -43,6 +43,7 @@ runtime! archlinux.vim
 		Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 		Plug 'tpope/vim-fugitive' "Git features
 		Plug 'mileszs/ack.vim'
+		Plug 'airblade/vim-gitgutter'
 
 		" Vim specific stuff
 		Plug 'tpope/vim-fireplace'
