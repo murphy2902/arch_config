@@ -1,8 +1,6 @@
 #!/bin/bash
-#
-# ~/.xinitrc
-#
-# Executed by startx (run your window manager from here)
+# If you don't know a command, don't forget to google it and look at the man
+# page!  I'll comment special tricks :)
 
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
@@ -12,20 +10,20 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Custom key bindings
-[[ -s $XDG_CONFIG_HOME/xmodmap/xmodmap.conf ]] && xmodmap $XDG_CONFIG_HOME/xmodmap/xmodmap.conf
-
-# X related script stuff
-[[ -f $XDG_CONFIG_HOME/x/colorscheme.sh ]] && . $XDG_CONFIG_HOME/x/colorscheme.sh
-
-
-# Running .Xresources
-[[ -f $XDG_CONFIG_HOME/x/.Xresources ]] && xrdb -merge $XDG_CONFIG_HOME/x/.Xresources
+# [[ ]] tests for existence, (see man test)
+[[ -f $XDG_CONFIG_HOME/xmodmap/xmodmap.conf ]] \
+	&& xmodmap $XDG_CONFIG_HOME/xmodmap/xmodmap.conf
 
 #/usr/bin/xscreensaver -no-splash &
 
-thmr flcl
-xbindkeys &
-mopidy &
+# Check out thmr @ github.com/oatmealraisin/thmr
+[[ -e `which thmr` ]] \
+	&& `which thmr` flcl
+
+xbindkeys
+
+dunst &
+#mopidy &
 #mpdscribble --conf $XDG_CONFIG_HOME/mpdscribble/mpdscribble.conf &
 
-exec i3
+#exec i3
