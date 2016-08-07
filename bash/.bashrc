@@ -1,5 +1,4 @@
-#!/bin/bash
+# .bashrc
+# This is just a placeholder to funnel stuff to my configs
 
-for file in ~/.config/sh/*.sh; do
-	. $file
-done
+[[ -f ~/.config/bash/bashrc ]] && . ~/.config/bash/bashrc
