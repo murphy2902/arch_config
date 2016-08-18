@@ -12,8 +12,7 @@ alias uninstall='sudo pacman -R'
 alias conky='conky -c ~/.config/conky/.conkyrc'
 alias irssi='screen irssi'
 alias mkdir='mkdir -pv'
-alias vim='vim -u ~/.config/vim/vimrc.conf'
-alias nim='nvim'
+#alias vim='vim -u ~/.config/vim/vimrc.conf'
 
 # jasmine stuff
 alias ftp-jasmine='sftp -oPort=20025 murphyjr3@jasmine.cs.vcu.edu'
