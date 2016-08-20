@@ -62,16 +62,6 @@ client.unfocused        #000000 #5f676a #888888 #30363b
 client.urgent           #000000 #9b6465 #ffffff #9b6465
 client.placeholder      #000000 #ffffff #ffffff #000000
 
-
-#  Music Stuff
-# # #
-
-
-bindsym XF86AudioRaiseVolume exec amixer set Master 5+
-bindsym XF86AudioLowerVolume exec amixer set Master 5-
-bindsym XF86AudioMute        exec amixer set Master toggle
-
-
 # Window Stuff
 # # #
 

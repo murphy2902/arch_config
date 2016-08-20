@@ -59,19 +59,19 @@
 
 # TODO: Find a way to use flags + generic stuff
 
-"uxterm"
+"$APP_TERMINAL"
 	Mod4 + Return
 
 "uxterm -class Floating"
 	Shift+Mod4 + Return
 
-"firefox"
+"$APP_BROWSER"
 	Mod4 + 1
 
-"pcmanfm"
+"$APP_FILEBROWSER"
 	Mod4 + 2
 
-"nvim"
+"$APP_EDITOR"
 	Mod4 + 3
 
 "uxterm -class Floating -e ncmpcpp"
@@ -82,9 +82,6 @@
 
 "arandr"
 	Mod4 + a
-
-"$BROWSER"
-	Mod4 + c
 
 "eclipse"
 	Mod4 + e
@@ -98,27 +95,41 @@
 "nitrogen"
 	Mod4 + n
 
-"vlc"
+"$APP_VIDEO"
 	Mod4 + v
 
+"xbacklight -dec 10"
+	XF86MonBrightnessDown
+
+"xbacklight -inc 10"
+	XF86MonBrightnessUp
+
+"amixer set Master 5+"
+	XF86AudioRaiseVolume
+
+"amixer set Master 5-"
+	XF86AudioLowerVolume
+
+"amixer set Master toggle"
+	XF86AudioMute
 
 # Internet Shortcuts
 # # #
 
 
-"$BROWSER https://www.mail.google.com"
+"$APP_BROWSER https://www.mail.google.com"
 	Mod2 + m
 
-"$BROWSER www.youtube.com"
+"$APP_BROWSER www.youtube.com"
 	Mod2 + v
 
-"$BROWSER www.google.com/calendar"
+"$APP_BROWSER www.google.com/calendar"
 	Mod2 + c
 
-"$BROWSER www.facebook.com"
+"$APP_BROWSER www.facebook.com"
 	Mod2 + f
 
-"$BROWSER www.drive.google.com"
+"$APP_BROWSER www.drive.google.com"
 	Mod2 + 2
 
 ##################################
