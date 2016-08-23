@@ -22,3 +22,14 @@ timer() {
 		echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
 	done
 }
+
+alarm() { 
+	[[ -n $1 ]] \
+		|| echo "Error: alarm takes one argument"; return 1
+
+	sleep $1
+	while true; do
+		sleep 30m
+		alert "ping"
+	done
+}
