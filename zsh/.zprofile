@@ -1,5 +1,4 @@
-[[ -f ~/.config/zsh/.zshrc ]] && . ~/.config/zsh/.zshrc
+# .zprofile
+# This is just a placeholder to funnel stuff to my configs
 
-# x is already started?
-#[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] 
-#&& exec startx
+[[ -f ~/.config/zsh/zshrc ]] && . ~/.config/zsh/zshrc

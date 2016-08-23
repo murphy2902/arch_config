@@ -18,12 +18,11 @@ fi
 
 # Check out thmr @ github.com/oatmealraisin/thmr
 [[ -e `which thmr` ]] \
-	&& `which thmr` flcl
+	&& thmr flcl
 
 xbindkeys
 
 dunst &
 #mopidy &
 #mpdscribble --conf $XDG_CONFIG_HOME/mpdscribble/mpdscribble.conf &
-
-#exec i3
+exec i3
