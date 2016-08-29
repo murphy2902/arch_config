@@ -11,7 +11,3 @@ connect() {
 alert() {
 	notify-send $1 -u critical
 }
-
-update() {
-	echo "TODO:"
-}
