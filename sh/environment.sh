@@ -7,6 +7,8 @@ export WEECHAT_HOME="$XDG_CONFIG_HOME/weechat"
 export PATH=$WEKAHOME/:$PATH
 
 export BROWSER="firefox"
+# Changing this will mess up 256 color compat with [n]vim
+export TERM="xterm-256color"
 export CLASSPATH=/usr/share/java/weka/weka.jar:$CLASSPATH
 export EDITOR="nvim"
 export GOPATH=~/documents/projects/go
