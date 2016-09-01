@@ -34,4 +34,4 @@ export APP_EMAIL="thunderbird"
 export APP_TERMINAL="uxterm"
 export APP_VIDEO="vlc"
 
-PS1=' > '
+PS1=' $ '
