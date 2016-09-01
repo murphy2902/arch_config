@@ -12,10 +12,6 @@ alert() {
 	notify-send $1 -u critical
 }
 
-update() {
-	echo "TODO:"
-}
-
 timer() {
 	date1=`date +%s`
 	while true; do 
