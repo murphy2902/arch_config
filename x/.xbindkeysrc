@@ -95,6 +95,9 @@
 "nitrogen"
 	Mod4 + n
 
+"passmenu"
+	Mod4 + p
+
 "$APP_VIDEO"
 	Mod4 + v
 
