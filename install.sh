@@ -17,12 +17,61 @@
 echo Create a non-root user?
 
 echo Username?  
-
+username=ryan
 
 pacman -S sudo
-pacman -S abs arandr archey3 boost chromium clang clang-tools-extra cmake deluge eclipse ettercap expac freecad gimp gnuplot gparted i3 irssi jdk8-openjdk lmms lxappearance mpd ncmpcpp netbeans nitrogen nmap nodejs pcmanfm puddletag redshift rfkill screen screenfetch scrot shutter sxiv synergy vim vlc wordpress wine wireshark-cli wireshark-gtk xorg xterm 
-abs
+pacman -S \
+	abs \
+	arandr \
+	archey3 \
+	boost \
+	chromium \
+	clang \
+	clang-tools-extra \
+	cmake \
+	deluge \
+	eclipse \
+	ettercap \
+	expac \
+	feh \
+	firefox \
+	gimp \
+	gnuplot \
+	gparted \
+	go \
+	i3 \
+	htop \
+	lmms \
+	lxappearance \
+	make \
+	mpd \
+	ncmpcpp \
+	neovim \
+	nmap \
+	nodejs \
+	pcmanfm \
+	qutebrowser \
+	rfkill \
+	scrot \
+	sxiv \
+	tmux \
+	vim \
+	vlc \
+	weechat \
+	xorg-xinit \
+	xorg \
+	xterm
+
 mkdir /var/abs/local
 #TODO chown the local directory to the user that was created, or maybe wheel group?
 #TODO download pacaur and install it using makepkg
 
+mkdir /home/$username/documents
+mkdir /home/$username/downloads
+mkdir /home/$username/images
+mkdir /home/$username/videos
+mkdir /home/$username/.local
+mkdir /home/$username/.cache
+mkdir /home/$username/documents/projects
+mkdir /home/$username/documents/sources
+mkdir /home/$username/documents/test

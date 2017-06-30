@@ -71,8 +71,8 @@
 "$APP_FILEBROWSER"
 	Mod4 + 2
 
-"$APP_EDITOR"
-	Mod4 + 3
+#"$APP_EDITOR"
+	#Mod4 + 3
 
 "uxterm -class Floating -e ncmpcpp"
 	Mod4 + 4
@@ -89,8 +89,8 @@
 "scrot -s"
 	Mod4 + j
 
-"$APP_EMAIL"
-	Mod4 + m
+#"$APP_EMAIL"
+	#Mod4 + m
 
 "nitrogen"
 	Mod4 + n

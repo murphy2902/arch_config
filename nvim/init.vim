@@ -25,8 +25,6 @@ runtime! archlinux.vim
 		endfunction
 
 		" Autocompletion
-		Plug 'Shougo/deoplete.nvim', {'do': function('DoRemote') }
-		Plug 'zchee/deoplete-go', {'do': 'make'}
 		Plug 'scrooloose/syntastic'
 		Plug 'tpope/vim-endwise' "Automagically closes more stuff
 
@@ -62,30 +60,4 @@ runtime! archlinux.vim
 	endif
 
 so $XDG_CONFIG_HOME/vim/vimrc.conf
-
-
-" Deoplete
-" " "
-
-	let g:deoplete#enable_at_startup=1
-	let g:deoplete#max_list=5
-
-	inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
-
-	" Closes autocomplete popup AND inserts newline on <CR>
-	inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-	function! s:my_cr_function() abort
-	  return deoplete#mappings#close_popup() . "\<CR>"
-	endfunction
-
-
-" Deoplete-Go
-" " "
-
-	let g:deoplete#sources#go#gocode_binary=''
-	let g:deoplete#sources#package_dot=0
-	let g:deoplete#sources#go#sort_class=[]
-	let g:deoplete#sources#go#use_cache=0
-	let g:deoplete#sources#go#json_directory=''
-	let g:deoplete#sources#go#cgo=0
 

@@ -22,7 +22,8 @@ export PGPPATH="$GNUPGHOME/"
 export SUDO_EDITOR="rvim"
 export TEMPDIR="/tmp"
 export TERM="xterm-256color"
-export XAUTHORITY="$XDG_CONFIG_HOME/x/.Xauthority"
+# DO NOT SET, FUCKS UP NEW COMPUTERS
+#export XAUTHORITY="$XDG_CONFIG_HOME/x/.Xauthority"
 export XINITRC="$XDG_CONFIG_HOME/x/.xinitrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
@@ -31,7 +32,7 @@ export APP_CALENDAR="california"
 export APP_EDITOR="nvim"
 export APP_FILEBROWSER="pcmanfm"
 export APP_EMAIL="thunderbird"
-export APP_TERMINAL="uxterm"
+export APP_TERMINAL="urxvt"
 export APP_VIDEO="vlc"
 
 PS1=' $ '
