@@ -16,10 +16,9 @@ general {
 
 order += "volume master"
 order += "disk /"
-order += "run_watch DHCP"
-order += "run_watch VPN"
+order += "disk /home"
 order += "wireless wlp2s0"
-order += "battery 1"
+order += "battery 0"
 order += "cpu_usage"
 order += "cpu_temperature 0"
 order += "tztime local"
@@ -36,13 +35,9 @@ wireless wlp2s0 {
    format_down = "W: down"
 }
 
-battery 1 {
+battery 0 {
    format = "%status %percentage"
-	path   = "/sys/class/power_supply/BAT1/uevent"
-}
-
-run_watch DHCP {
-   pidfile = "/var/run/dhcpcd*.pid"
+	path   = "/sys/class/power_supply/BAT0/uevent"
 }
 
 tztime local {
@@ -59,5 +54,9 @@ cpu_temperature 0 {
 }
 
 disk "/" {
+   format = "%avail"
+}
+
+disk "/home" {
    format = "%avail"
 }
