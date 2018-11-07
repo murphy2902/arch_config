@@ -62,7 +62,6 @@ pacman -S \
 	xorg \
 	xterm
 
-mkdir /var/abs/local
 #TODO chown the local directory to the user that was created, or maybe wheel group?
 #TODO download pacaur and install it using makepkg
 
@@ -75,3 +74,8 @@ mkdir /home/$username/.cache
 mkdir /home/$username/documents/projects
 mkdir /home/$username/documents/sources
 mkdir /home/$username/documents/test
+
+# TODO: install yay
+
+yay -S betterlockscreen
+yay -S brightnessctl

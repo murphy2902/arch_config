@@ -50,6 +50,9 @@ bindsym $exmod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $exmod+Shift+e exec i3-msg exit
 
+# lock
+bindsym $exmod+l exec --no-startup-id betterlockscreen -l blur
+
 
 # Color Stuff
 # # #
