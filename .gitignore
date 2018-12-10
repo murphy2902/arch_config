@@ -1,1 +1,11 @@
 *unique*
+gnupg/crls.d
+gnupg/openpgp-revocs.d
+gnupg/private-keys-v1.d
+gnupg/*.kbx
+gnupg/random_seed
+gnupg/sshcontrol
+gnupg/trustdb.gpg
+gnupg/tofu.db
+
+vim/.vim_mru_files
