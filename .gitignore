@@ -8,11 +8,13 @@ gnupg/sshcontrol
 gnupg/trustdb.gpg
 gnupg/tofu.db
 
-vim/.vim_mru_files
-
 nvim/autoload/
 
-zsh/.zcompdump
+RescueTime.com/log/
+
+vim/.vim_mru_files
 
 weechat/*.log
 weechat/logs
+
+zsh/.zcompdump
