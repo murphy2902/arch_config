@@ -9,3 +9,10 @@ gnupg/trustdb.gpg
 gnupg/tofu.db
 
 vim/.vim_mru_files
+
+nvim/autoload/
+
+zsh/.zcompdump
+
+weechat/*.log
+weechat/logs
