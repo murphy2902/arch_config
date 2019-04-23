@@ -1,0 +1,7 @@
+set realname       = "Ryan Murphy"
+set my_smtp_user   = "`pass murph.ai/email/username`"
+set from           = "`pass oatmealrais.in/email/username`"
+set smtp_pass      = "`pass murph.ai/email/password`"
+set signature      = "$XDG_CONFIG_HOME/neomutt/consulting/sig"
+
+set smtp_url=smtps://$my_smtp_user@smtp.gmail.com

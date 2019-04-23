@@ -1,0 +1,17 @@
+set my_cc_user = "`pass cyberconcepts.dev/email/username`"
+set my_cc_pass = "`pass cyberconcepts.dev/email/password`"
+
+set imap_user   = $my_cc_user
+set imap_pass   = $my_cc_pass
+set folder      = imaps://$imap_user@imap.gmail.com/
+
+set spoolfile   = +INBOX
+
+set record="+[Gmail]/Sent Mail"
+set postponed="+[Gmail]/Drafts"
+
+mailboxes +INBOX
+
+account-hook $folder 'set imap_user="$my_cc_user" imap_pass="$my_cc_pass"'
+folder-hook $folder 'source $XDG_CONFIG_HOME/neomutt/cyberconcepts/folder'
+source $XDG_CONFIG_HOME/neomutt/cyberconcepts/folder

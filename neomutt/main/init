@@ -1,0 +1,17 @@
+set my_main_user = "`pass mail.google.com/username`"
+set my_main_pass = "`pass mail.google.com/password`"
+
+set imap_user   = $my_main_user
+set imap_pass   = $my_main_pass
+set folder      = imaps://$imap_user@imap.gmail.com/
+
+set spoolfile   = +INBOX
+
+set record="+[Gmail]/Sent Mail"
+set postponed="+[Gmail]/Drafts"
+
+mailboxes +INBOX
+
+account-hook $folder 'set imap_user="$my_main_user" imap_pass="$my_main_pass"'
+folder-hook $folder 'source $XDG_CONFIG_HOME/neomutt/main/folder'
+source $XDG_CONFIG_HOME/neomutt/main/folder

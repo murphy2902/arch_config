@@ -1,0 +1,12 @@
+set imap_user   = $my_init_user
+set imap_pass   = $my_init_pass
+
+set folder      = imaps://$imap_user@imap.gmail.com/
+
+set spoolfile   = +INBOX
+
+set record="+[Gmail]/Sent Mail"
+set postponed="+[Gmail]/Drafts"
+
+mailboxes +INBOX
+

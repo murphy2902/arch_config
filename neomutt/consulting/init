@@ -1,0 +1,19 @@
+set my_consulting_user = "`pass murph.ai/email/username`"
+set my_consulting_pass = "`pass murph.ai/email/password`"
+
+set imap_user   = $my_consulting_user
+set imap_pass   = $my_consulting_pass
+set folder      = imaps://$imap_user@imap.gmail.com/
+
+set spoolfile   = +INBOX
+
+set record="+[Gmail]/Sent Mail"
+set postponed="+[Gmail]/Drafts"
+
+mailboxes +INBOX
+
+account-hook $folder 'set imap_user="$my_consulting_user" imap_pass="$my_consulting_pass"'
+folder-hook $folder 'source $XDG_CONFIG_HOME/neomutt/consulting/folder'
+source $XDG_CONFIG_HOME/neomutt/consulting/folder
+
+set smtp_url=smtps://$my_smtp_user@smtp.gmail.com
