@@ -1,3 +1,6 @@
+# https://github.com/jindraj/dotfiles/blob/master/.neomutt/neomuttrc.sidebar
+# https://github.com/jindraj/dotfiles/blob/master/.neomutt/neomuttrc.mailboxes
+# https://pastebin.com/4ZesFTMs
 set wait_key = no        # shut up, mutt
 set header_cache = ~/.cache/neomutt
 set timeout = 3          # idle time before scanning
@@ -6,6 +9,8 @@ set mail_check_stats
 # MAP connection alive by polling intermittently (time in seconds).
 set imap_keepalive = 300
 
+set nm_exclude_tags = "snooze,old"
+
 # How often to check for new mail (time in seconds).
 set mail_check = 120
 unset imap_passive
@@ -13,14 +18,13 @@ unset imap_passive
 unset move # gmail does that
 unset record
 
-
-unset mark_old           # read/new is good enough for me
+unset mark_old # read/new is good enough for me
 set autoedit
 
-set sort=threads
+set sort     = threads
 set sort_aux = reverse-last-date-received
 
-set mailcap_path  = $XDG_CONFIG_HOME/neomutt/mailcap
+set mailcap_path = $XDG_CONFIG_HOME/neomutt/mailcap
 auto_view text/html
 
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
@@ -29,6 +33,9 @@ macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract 
 bind index,pager V noop        ## Unbinds V from version
 macro attach V "<pipe-entry>cat >~/.cache/neomutt/mail.html && $BROWSER ~/.cache/neomutt/mail.html<enter>"
 
+bind browser g  noop
+bind browser gg first-entry
+bind browser G last-entry
 
 # Bindings
 # # #
@@ -52,14 +59,21 @@ bind pager \Cr group-reply
 
 #set imap_check_subscribed
 
-source $XDG_CONFIG_HOME/neomutt/main/init
+set nm_default_url = "notmuch://$XDG_DATA_HOME/mail"
+named-mailboxes "All" "notmuch://?query=tag:inbox"
+
+source $XDG_CONFIG_HOME/neomutt/ryan@cyberconcepts.dev/init
+source $XDG_CONFIG_HOME/neomutt/iwwnyc/init
+source $XDG_CONFIG_HOME/neomutt/ryan@oatmealrais.in/init
+source $XDG_CONFIG_HOME/neomutt/murphy2902@gmail.com/init
+source $XDG_CONFIG_HOME/neomutt/ryanmurphy@plutusprivacysecurity.com/init
+source $XDG_CONFIG_HOME/neomutt/x389214/init
 source $XDG_CONFIG_HOME/neomutt/secret/init
-source $XDG_CONFIG_HOME/neomutt/cyberconcepts/init
-source $XDG_CONFIG_HOME/neomutt/consulting/init
 set ssl_force_tls = yes
 unset ssl_starttls
 
 set alias_file=~/.config/neomutt/mail_aliases
+
 
 
 # Aesthetics
@@ -67,16 +81,49 @@ set alias_file=~/.config/neomutt/mail_aliases
 
 source $XDG_CONFIG_HOME/neomutt/colors/haruko.neomuttrc
 
+#set indent_string = "  "
+set attribution = "On %D, %n <%a> wrote:"
+
 # Sidebar
-set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set sidebar_format = "%D%?F? [%F]?%* %?N?%N/?%S"
 #set sidebar_sort_method = 'alpha'
 set sidebar_visible=yes
-set sidebar_folder_indent=yes   # Indent folders whose names we've shortened
-set sidebar_indent_string='   ' # Indent with two spaces
-set sidebar_short_path          # Shorten mailbox names
-set sidebar_delim_chars='/.'    # Delete everything up to the last / character
+set sidebar_folder_indent=yes  # Indent folders whose names we've shortened
+set sidebar_indent_string='  ' # Indent with two spaces
+set sidebar_short_path         # Shorten mailbox names
+set sidebar_delim_chars='/'   # Delete everything up to the last / character
+
+bind index,pager			\CP	sidebar-prev
+bind index,pager			<up>	sidebar-prev
+bind index,pager			\CN	sidebar-next
+bind index,pager			<down>	sidebar-next
+bind index,pager			\CK	sidebar-open
+bind index,pager			<right>	sidebar-open
+bind index,browser,generic,pager	}	sidebar-page-down
+bind index,browser,generic,pager	{	sidebar-page-up
 
 #set mail_check_stats
 
 set date_format="%m-%d %T"
 set index_format="%2C | %Z [%d] %-30.30F %s"
+
+# Macros
+# # #
+
+bind index,pager S noop
+macro index,pager S1 "<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '1 days'`<enter>"
+timeout-hook "macro index,pager S1 \"<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '1 days'`<enter>\""
+macro index,pager S2 "<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '2 days'`<enter>"
+timeout-hook "macro index,pager S2 \"<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '2 days'`<enter>\""
+macro index,pager S3 "<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '3 days'`<enter>"
+timeout-hook "macro index,pager S3 \"<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '3 days'`<enter>\""
+macro index,pager S4 "<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '4 days'`<enter>"
+timeout-hook "macro index,pager S4 \"<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '4 days'`<enter>\""
+macro index,pager S5 "<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '5 days'`<enter>"
+timeout-hook "macro index,pager S5 \"<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '5 days'`<enter>\""
+macro index,pager S6 "<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '6 days'`<enter>"
+timeout-hook "macro index,pager S6 \"<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '6 days'`<enter>\""
+macro index,pager S7 "<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '6 days'`<enter>"
+timeout-hook "macro index,pager S7 \"<modify-tags>+snooze<enter>k<modify-tags-then-hide>+snooze`date +%Y-%m-%d -d '7 days'`<enter>\""
+
+macro index SS "<shell-escape>mbsync -aV<enter><shell-escape>notmuch new<enter>" "sync email"
