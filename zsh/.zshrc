@@ -15,3 +15,6 @@ for file in ~/.config/sh/*.sh; do
 done
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Correct misspelled commands
+setopt correct
