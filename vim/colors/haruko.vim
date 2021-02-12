@@ -102,6 +102,10 @@ hi link octaveuservar nontext
 
 hi link pythonfunction type
 
+" Markdown
+
+hi link mkdHeading type
+
 " MRU
 " " "
 

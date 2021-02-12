@@ -1,0 +1,42 @@
+-- density, slow
+-- every
+
+-- [Live Stream: Exploring the "rot" function in TidalCycles](https://www.youtube.com/watch?v=oXzCRuRbuOU)
+-- rot
+
+-- [Live Stream: Exploring Randomness in TidalCycles](https://www.youtube.com/watch?v=Ob8CAvMw7aQ)
+-- range
+-- choose
+-- rand
+-- sometimes[By], often, rarely
+-- someCycles[By] : Like sometimes, but applies to entire cycles
+-- degrade[By] : removes samples from a sound randomly, default 0.5
+
+setcps (120/120)
+
+d1 
+	$
+
+d2 
+	$
+
+d3 
+	$
+
+d4 
+	$
+
+d5 
+	$
+
+d6 
+	$
+
+d7 
+	$
+
+d8 
+	$
+
+d9 
+	$
