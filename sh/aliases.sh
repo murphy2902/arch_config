@@ -14,11 +14,9 @@ alias irssi='screen irssi'
 alias mkdir='mkdir -pv'
 #alias vim='vim -u ~/.config/vim/vimrc.conf'
 
-# jasmine stuff
-alias ftp-jasmine='sftp -oPort=20025 murphyjr3@jasmine.cs.vcu.edu'
-
 # Safety dance
 alias rm='rm -I'
+alias mv='mv -i'
 
 # Error Handling, because I suck
 alias :q='exit' # Dammit vim
@@ -26,9 +24,19 @@ alias :x='exit' # Dammit vim
 alias quit='exit'
 alias sl='ls'
 
-alias lugcraft='ssh -L 25565:localhost:25565 murphyjr3@ouroboros.chpc.vcu.edu'
-alias freehosts='sudo mv /etc/hosts /etc/toasts' # A toast to distraction!
-alias blockhosts='sudo mv /etc/toasts /etc/hosts' # And distraction's inevitable reply.
-alias mpkg='makepkg -scif' # This will probably be stupid when I install an AUR helper
 alias please='sudo $(history -p !!)'
 alias again='clear; $(history -p !!)'
+
+alias cdtasker='cd $GOPATH/src/github.com/oatmealraisin/tasker && pwd'
+alias vitasklist='nvim ~/.local/tasker/tasklist.csv'
+alias t='tasker status'
+alias today='tasker today'
+alias todo='tasker today'
+
+alias o='xdg-open'
+
+alias python_gitignore='curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore > .gitignore'
+# Does not work with pipenv
+#alias deactivate='exit'
+
+alias sshme='eval <(ssh-agent -s) && ssh-add ~/.ssh/id_rsa.pub'

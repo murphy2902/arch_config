@@ -12,6 +12,10 @@ alert() {
 	notify-send $1 -a $APP_TERMINAL -u critical
 }
 
+random_ps1() {
+	export PS1="$((RANDOM)) $ "
+}
+
 gocd() {
 	asdf=(`echo -n $1 | sed -e 's/\// /g'`)
 	[[ ! -n ${asdf[2]} ]] \
@@ -57,14 +61,39 @@ alarm() {
 	done
 }
 
-update() {
-	manager=whichManager
-	sudo ${manager}
+whichManager() {
+	[[ -x /usr/bin/dnf ]] && \
+		echo -n "dnf update"
+	[[ -x /usr/bin/pacman ]] && \
+		echo -n "pacman -Syyu"
 }
 
-whichManager() {
-	[[ -e /usr/bin/dnf ]] && \
-		return "dnf update"
-	[[ -e /usr/bin/pacman ]] && \
-		return "pacman -Syyu"
+update() {
+	if [[ -e ~/.config/sh/functions.sh ]]; then
+		manager=$(whichManager)
+		echo $manager
+		eval "sudo ${manager}"
+	else
+		echo "functions.sh not found"
+		sudo pacman -Syyu
+	fi
+}
+
+topen() {
+	[[ -n $1 ]] \
+		|| echo "Error: topen takes one argument"; return 1
+
+	firefox --new-tab $(tasker get --uuid $1 --url)
+}
+
+venv() {
+	if [[ ! -d venv ]]; then
+		python -m virtualenv venv
+	fi
+	if [[ -e venv/bin/activate ]]; then
+		source venv/bin/activate
+	fi
+	if [[ -e requirements.txt ]]; then
+		pip install -r requirements.txt
+	fi
 }
