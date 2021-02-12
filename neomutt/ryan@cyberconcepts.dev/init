@@ -1,0 +1,10 @@
+#set folder      = ~/.local/mail/cyberconcepts.dev
+#named-mailboxes "cyberconcepts" +Inbox
+named-mailboxes \
+	"All/conceptual" "notmuch://?query=to:(*@cyberconcepts.dev or *@plutusprivacysecurity.com)" \
+	"All/conceptual/ryan@cyberconcepts.dev" "notmuch://?query=to:ryan@cyberconcepts.dev" \
+	"All/conceptual/contact@cyberconcepts.dev" "notmuch://?query=to:contact@cyberconcepts.dev" \
+	"All/conceptual/plutus" "notmuch://?query=to:ryanmurphy@plutusprivacysecurity.com" \
+
+set record = "+sent"
+folder-hook conceptual 'source $XDG_CONFIG_HOME/neomutt/ryan@cyberconcepts.dev/folder'

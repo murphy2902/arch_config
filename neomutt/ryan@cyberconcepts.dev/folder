@@ -2,5 +2,6 @@ set realname       = "Ryan Murphy"
 set my_smtp_user   = "`pass cyberconcepts.dev/email/username`"
 set from           = $my_smtp_user
 set smtp_pass      = "`pass cyberconcepts.dev/email/password`"
+set signature      = ""
 
 set smtp_url=smtps://$my_smtp_user@smtp.gmail.com

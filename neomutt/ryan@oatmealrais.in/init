@@ -1,0 +1,11 @@
+set folder      = ~/.local/mail/oatmealrais.in/
+#named-mailboxes "oatmealrais.in" +Inbox
+named-mailboxes \
+	"All/oatmealraisin" "notmuch://?query=to:*@oatmealrais.in" \
+	"All/oatmealraisin/ryan@oatmealrais.in" "notmuch://?query=to:ryan@oatmealrais.in" \
+	"All/oatmealraisin/ryan@conceptu.al" "notmuch://?query=to:ryan@conceptu.al" \
+   "All/oatmealraisin/ryan@murph.ai" "notmuch://?query=to:ryan@murph.ai"
+set record = "+sent"
+folder-hook ryan@oatmealrais.in 'source $XDG_CONFIG_HOME/neomutt/ryan@oatmealrais.in/folder'
+folder-hook ryan@murph.ai 'source $XDG_CONFIG_HOME/neomutt/ryan@oatmealrais.in/folder'
+folder-hook ryan@conceptu.al 'source $XDG_CONFIG_HOME/neomutt/ryan@oatmealrais.in/folder'

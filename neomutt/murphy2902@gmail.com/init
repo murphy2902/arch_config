@@ -1,0 +1,6 @@
+#set folder      = ~/.local/mail/mail.google.com/
+named-mailboxes \
+	"All/murphy2902@gmail.com" "notmuch://?query=to:murphy2902@gmail.com"
+
+set record = "+sent"
+folder-hook murphy2902@gmail.com 'source $XDG_CONFIG_HOME/neomutt/murphy2902@gmail.com/folder'
