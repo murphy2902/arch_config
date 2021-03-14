@@ -102,6 +102,12 @@ hi link octaveuservar nontext
 
 hi link pythonfunction type
 
+" Markdown
+
+hi link mkdHeading nontext
+hi link mkdListItem type
+hi link mkdBlockquote statement
+
 " MRU
 " " "
 
@@ -122,3 +128,7 @@ hi link vimuserfunc function
 hi link xmlattrib nontext
 hi link xmltag statement
 
+" yaml
+" " "
+
+hi link yamlBlockMappingKey statement

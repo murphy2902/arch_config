@@ -27,15 +27,48 @@ runtime! archlinux.vim
 		" Autocompletion
 		Plug 'scrooloose/syntastic'
 		Plug 'tpope/vim-endwise' "Automagically closes more stuff
+		Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+		" Base64
+		Plug 'christianrondeau/vim-base64'
+
+		" CSV
+		Plug 'chrisbra/csv.vim'
 
 		" Go
 		Plug 'fatih/vim-go'
+		Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+		Plug 'zchee/deoplete-go', { 'do': 'make'}
+
+		" Linux C
+		Plug 'vivien/vim-linux-coding-style'
+
+		" Jupyter
+		Plug 'szymonmaszke/vimpyter'
+
+		" Markdown
+		Plug 'godlygeek/tabular' " Dependency
+		Plug 'sedm0784/vim-you-autocorrect'
+		Plug 'plasticboy/vim-markdown'
+
+		" Scala
+		Plug 'derekwyatt/vim-scala'
+
+		" LaTeX
+		Plug 'vim-latex/vim-latex'
 
 		" Tmux
 		Plug 'tmux-plugins/vim-tmux'
 
 		" Octave
 		Plug 'jvirtanen/vim-octave'
+
+		" Protobuf
+		Plug 'uarun/vim-protobuf'
+
+		" Python
+		Plug 'zchee/deoplete-jedi'
+		Plug 'plytophogy/vim-virtualenv'
 
 		" External tool interfacing
 		Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -56,8 +89,22 @@ runtime! archlinux.vim
 		Plug 'lilydjwg/colorizer'
 		Plug 'vim-ruby/vim-ruby'
 
+		" LiveCoding
+		Plug 'supercollider/scvim'
+		Plug 'tidalcycles/vim-tidal'
+
 		call plug#end()
 	endif
 
 so $XDG_CONFIG_HOME/vim/vimrc.conf
 
+
+" Deoplete
+" " "
+
+let g:deoplete#enable_at_startup = 1
+
+" vim-tidal
+" " "
+
+let g:tidal_target = "terminal"

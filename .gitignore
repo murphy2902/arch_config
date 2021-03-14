@@ -10,7 +10,10 @@ gnupg/tofu.db
 
 nvim/autoload/
 
-RescueTime.com/log/
+nvim/autoload
+nvim/ftplugin
+nvim/spell
+nvim/plugged
 
 vim/.vim_mru_files
 vim/autoload
