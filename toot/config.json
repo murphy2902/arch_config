@@ -1,0 +1,18 @@
+{
+ "active_user": "oatmealraisin@social.coop",
+ "apps": {
+  "social.coop": {
+   "base_url": "https://social.coop",
+   "client_id": "",
+   "client_secret": "",
+   "instance": "social.coop"
+  }
+ },
+ "users": {
+  "oatmealraisin@social.coop": {
+   "access_token": "",
+   "instance": "social.coop",
+   "username": "oatmealraisin"
+  }
+ }
+}

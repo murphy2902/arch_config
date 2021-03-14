@@ -13,8 +13,11 @@ nvim/autoload/
 RescueTime.com/log/
 
 vim/.vim_mru_files
+vim/autoload
+vim/plugged
 
 weechat/*.log
 weechat/logs
+weechat/python/autoload
 
 zsh/.zcompdump
