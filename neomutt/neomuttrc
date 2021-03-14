@@ -62,11 +62,11 @@ bind pager \Cr group-reply
 set nm_default_url = "notmuch://$XDG_DATA_HOME/mail"
 named-mailboxes "All" "notmuch://?query=tag:inbox"
 
-source $XDG_CONFIG_HOME/neomutt/ryan@cyberconcepts.dev/init
-source $XDG_CONFIG_HOME/neomutt/iwwnyc/init
+#source $XDG_CONFIG_HOME/neomutt/ryan@cyberconcepts.dev/init
+#source $XDG_CONFIG_HOME/neomutt/iwwnyc/init
 source $XDG_CONFIG_HOME/neomutt/ryan@oatmealrais.in/init
 source $XDG_CONFIG_HOME/neomutt/murphy2902@gmail.com/init
-source $XDG_CONFIG_HOME/neomutt/ryanmurphy@plutusprivacysecurity.com/init
+#source $XDG_CONFIG_HOME/neomutt/ryanmurphy@plutusprivacysecurity.com/init
 source $XDG_CONFIG_HOME/neomutt/x389214/init
 source $XDG_CONFIG_HOME/neomutt/secret/init
 set ssl_force_tls = yes
