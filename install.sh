@@ -20,47 +20,66 @@ echo Username?
 username=ryan
 
 pacman -S sudo
-pacman -S \
+
+echo "Installing defaults"
+pacman -S --noconfirm \
 	abs \
-	arandr \
-	archey3 \
-	boost \
-	chromium \
-	clang \
-	clang-tools-extra \
-	cmake \
-	deluge \
-	eclipse \
-	ettercap \
 	expac \
-	feh \
-	firefox \
-	gimp \
-	gnuplot \
-	gparted \
-	go \
-	i3 \
 	htop \
 	lmms \
-	lxappearance \
 	make \
 	mpd \
 	ncmpcpp \
 	neovim \
 	nmap \
-	nodejs \
-	pcmanfm \
-	qutebrowser \
 	rfkill \
-	scrot \
-	sxiv \
 	tmux \
 	vim \
-	vlc \
 	weechat \
+
+echo "Installing languages"
+	automake \
+	boost \
+	clang \
+	clang-tools-extra \
+	cmake \
+	go \
+	nodejs
+
+echo "Installing X"
+pacman -S --noconfirm
+	arandr \
+	archey3 \
+	chromium \
+	deluge \
+	dunst \
+	feh \
+	firefox \
+	gimp \
+	gnuplot \
+	gparted \
+	i3 \
+	lxappearance \
+	pcmanfm \
+	qutebrowser \
+	scrot \
+	sxiv \
+	vlc \
 	xorg-xinit \
 	xorg \
 	xterm
+
+echo "Installing packages for neovim"
+
+sudo pacman -S --noconfirm \
+	neovim \
+	nodejs \
+	npm \
+	python-neovim \
+	python2-neovim \
+	rubygems \
+	yarn
+
 
 #TODO chown the local directory to the user that was created, or maybe wheel group?
 #TODO download pacaur and install it using makepkg
