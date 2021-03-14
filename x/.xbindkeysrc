@@ -74,11 +74,8 @@
 #"$APP_EDITOR"
 	#Mod4 + 3
 
-"uxterm -class Floating -e ncmpcpp"
+"i3-msg '[title="ncmpcpp"] focus' || termite -e ncmpcpp"
 	Mod4 + 4
-
-"uxterm -e screen irssi --home=${XDG_CONFIG_HOME}/irssi"
-	Mod4 + 5
 
 "arandr"
 	Mod4 + a
@@ -89,8 +86,23 @@
 "scrot -s"
 	Mod4 + j
 
-#"$APP_EMAIL"
-	#Mod4 + m
+"i3-msg '[title="weechat"] focus' || discord"
+	Shift+Mod4+d
+
+"i3-msg '[title="weechat"] focus' || termite -e weechat"
+   Mod4 + w
+
+"i3-msg '[class="signal"] focus' || signal-desktop"
+   Mod4 + s
+
+"i3-msg '[class="slack"] focus' || slack"
+   Shift+Mod4 + s
+
+"i3-msg '[title="neomutt"] focus' || termite -e neomutt"
+	Mod4 + m
+
+"i3-msg '[class="mumble"] focus' || mumble"
+	Shift+Mod4 + m
 
 "nitrogen"
 	Mod4 + n
@@ -116,24 +128,9 @@
 "amixer set Master toggle"
 	XF86AudioMute
 
-# Internet Shortcuts
-# # #
-
-
-"$APP_BROWSER https://www.mail.google.com"
-	Mod2 + m
-
-"$APP_BROWSER www.youtube.com"
-	Mod2 + v
-
-"$APP_BROWSER www.google.com/calendar"
-	Mod2 + c
-
-"$APP_BROWSER www.facebook.com"
-	Mod2 + f
-
-"$APP_BROWSER www.drive.google.com"
-	Mod2 + 2
+#"xdotool type '¯\_(ツ)_/¯'"
+"xvkbd -xsendevent -text '¯\_(ツ)_/¯'"
+   Shift+Mod4+O
 
 ##################################
 # End of xbindkeys configuration #
