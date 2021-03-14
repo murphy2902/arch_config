@@ -10,7 +10,9 @@
 [merge]
 	tool = meld
 [user]
-	email = rymurphy@redhat.com
+	email = ryan@oatmealrais.in
 	name = oatmealraisin
 #[url "git@github.com:"]
 #	insteadOf = https://github.com/
+[pull]
+	rebase = false
