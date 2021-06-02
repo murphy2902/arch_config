@@ -9,6 +9,7 @@ alias pacs='pacman -Ss'
 alias uninstall='sudo pacman -R'
 
 # updated program calls
+alias scrot='scrot -f -e '"'"'mv $n ~/images/screenshots'"'"
 alias conky='conky -c ~/.config/conky/.conkyrc'
 alias irssi='screen irssi'
 alias mkdir='mkdir -pv'
