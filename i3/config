@@ -35,6 +35,8 @@ for_window [title="tmp"] floating enable
 for_window [title="New Message"] floating enable
 for_window [title="feh-mailcap"] floating enable
 for_window [window_role="pop-up"] floating enable
+for_window [title="Sign in - Google Accounts — Mozilla Firefox"] floating enable
+
 
 
 # dmenu
@@ -106,7 +108,7 @@ bindsym $winmod+c layout toggle split
 bindsym $winmod+Shift+space floating toggle
 
 # Make a window persistent across workspaces
-bindsym $winmod+n sticky enable
+bindsym $winmod+n sticky toggle
 
 # change focus between tiling / floating windows
 #bindsym $winmod+m focus mode_toggle
