@@ -14,30 +14,41 @@
 # TODO:  Check for ARM system
 # TODO:  Intuitive queries, "Install without wm?"
 
-echo Create a non-root user?
-
-echo Username?  
+#echo Create a non-root user?
+#
+#echo Username?  
 username=ryan
+#
+#pacman -S sudo
 
-pacman -S sudo
 
 echo "Installing defaults"
-pacman -S --noconfirm \
-	abs \
+sudo pacman -S --noconfirm --needed \
+	alsa-utils \
 	expac \
 	htop \
+	isync \
 	lmms \
+	lynx \ #needed for neomutt
 	make \
 	mpd \
 	ncmpcpp \
+	networkmanager \
 	neovim \
 	nmap \
+	pass \
+	pass-otp \
+	pulseaudio-bluetooth \
 	rfkill \
 	tmux \
+	urlscan \ # needed for neomutt
 	vim \
 	weechat \
+	wget \
+	zsh
 
 echo "Installing languages"
+sudo pacman -S --noconfirm --needed \
 	automake \
 	boost \
 	clang \
@@ -46,40 +57,46 @@ echo "Installing languages"
 	go \
 	nodejs
 
+echo "Installing dev tools"
+sudo pacman -S --noconfirm --needed \
+	docker \
+	pandoc \ # For notes
+	git \
+	python-pipenv
+
 echo "Installing X"
-pacman -S --noconfirm
+sudo pacman -S --noconfirm --needed \
 	arandr \
 	archey3 \
+	caprine \
 	chromium \
 	deluge \
+	discord \
 	dunst \
+	evolution \
 	feh \
 	firefox \
+	firefox-extension-passff \
 	gimp \
 	gnuplot \
 	gparted \
-	i3 \
+	i3-gaps \
 	lxappearance \
+	mupdf \
+	pavucontrol \
 	pcmanfm \
 	qutebrowser \
 	scrot \
+	signal-desktop \
 	sxiv \
+	termite \
 	vlc \
+	xbindkeys \
 	xorg-xinit \
 	xorg \
 	xterm
 
-echo "Installing packages for neovim"
-
-sudo pacman -S --noconfirm \
-	neovim \
-	nodejs \
-	npm \
-	python-neovim \
-	python2-neovim \
-	rubygems \
-	yarn
-
+sudo pacman -Fy
 
 #TODO chown the local directory to the user that was created, or maybe wheel group?
 #TODO download pacaur and install it using makepkg
@@ -90,11 +107,25 @@ mkdir /home/$username/images
 mkdir /home/$username/videos
 mkdir /home/$username/.local
 mkdir /home/$username/.cache
+mkdir /home/$username/.cache/neomutt
 mkdir /home/$username/documents/projects
 mkdir /home/$username/documents/sources
 mkdir /home/$username/documents/test
 
 # TODO: install yay
 
-yay -S betterlockscreen
-yay -S brightnessctl
+git clone https://aur.archlinux.org/yay.git /home/$username/documents/sources/yay
+cd !$
+makepkg -i
+cd -
+
+yay -S \
+	betterlockscreen \
+	brightnessctl \
+	slack-desktop \
+	zoom
+
+systemctl start NetworkManager
+systemctl enable NetworkManager
+systemctl start bluetooth
+systemctl enable bluetooth
