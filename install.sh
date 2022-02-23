@@ -29,7 +29,7 @@ sudo pacman -S --noconfirm --needed \
 	htop \
 	isync \
 	lmms \
-	lynx \ #needed for neomutt
+	lynx \
 	make \
 	mpd \
 	ncmpcpp \
@@ -41,7 +41,7 @@ sudo pacman -S --noconfirm --needed \
 	pulseaudio-bluetooth \
 	rfkill \
 	tmux \
-	urlscan \ # needed for neomutt
+	urlscan \
 	vim \
 	weechat \
 	wget \
