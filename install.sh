@@ -77,8 +77,6 @@ sudo pacman -S --noconfirm --needed \
 	dunst \
 	evolution \
 	feh \
-	firefox \
-	firefox-extension-passff \
 	gimp \
 	gnuplot \
 	gparted \
@@ -97,6 +95,14 @@ sudo pacman -S --noconfirm --needed \
 	xorg \
 	xterm
 
+echo "Installing Firefox and plugins"
+sudo pacman -S --noconfirm --needed \
+	firefox \
+	firefox-extension-passff \
+	firefox-noscript \
+	firefox-tree-style-tab \
+	firefox-ublock-origin
+
 sudo pacman -Fy
 
 sudo usermod -s /usr/bin/zsh $username
@@ -110,9 +116,11 @@ mkdir /home/$username/videos
 mkdir /home/$username/.local
 mkdir /home/$username/.cache
 mkdir /home/$username/.cache/neomutt
+mkdir /home/$username/documents/books
 mkdir /home/$username/documents/projects
 mkdir /home/$username/documents/sources
 mkdir /home/$username/documents/test
+mkdir /home/$username/documents/work
 
 # TODO: install yay
 
