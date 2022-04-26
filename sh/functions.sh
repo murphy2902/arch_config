@@ -75,7 +75,7 @@ update() {
 		eval "sudo ${manager}"
 	else
 		echo "functions.sh not found"
-		sudo pacman -Syyu
+		sudo pacman -Syu
 	fi
 }
 
