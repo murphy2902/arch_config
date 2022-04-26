@@ -41,3 +41,5 @@ alias python_gitignore='curl https://raw.githubusercontent.com/github/gitignore/
 #alias deactivate='exit'
 
 alias sshme='eval <(ssh-agent -s) && ssh-add ~/.ssh/id_rsa.pub'
+
+alias journal='vim ~/documents/notes/journal'

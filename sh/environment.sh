@@ -18,6 +18,9 @@ export GOBIN=$GOPATH/bin
 export PATH=$GOBIN:$PATH
 export MYVIMRC=$XDG_CONFIG_HOME/vim/vimrc.conf
 
+[[ -x $(which ruby) ]] \
+	&& export PATH=$PATH:$(ruby -e 'puts Gem.user_dir')/bin
+
 export LESSHISTFILE=$XDG_DATA_HOME/lesshistory
 mkdir -p $XDG_DATA_HOME/mail \
 	&& export MAIL=$XDG_DATA_HOME/mail \
@@ -30,7 +33,7 @@ export R_LIBS_USER=$R_HOME_USER/library
 export R_HISTFILE=$XDG_CACHE_HOME/r/hist.Rhistory
 export SUDO_EDITOR="rvim"
 export TEMPDIR="/tmp"
-export TERM="rxvt-unicode-256color"
+#export TERM="rxvt-unicode-256color"
 # DO NOT SET, FUCKS UP NEW COMPUTERS
 #export XAUTHORITY="$XDG_CONFIG_HOME/x/.Xauthority"
 export XINITRC="$XDG_CONFIG_HOME/x/.xinitrc"
@@ -45,3 +48,5 @@ export APP_TERMINAL="termite"
 export APP_VIDEO="vlc"
 
 PS1=' $ '
+
+export JACK_OPTIONS="-Xalsarawmidi"
