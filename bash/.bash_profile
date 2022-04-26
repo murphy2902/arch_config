@@ -3,5 +3,3 @@
 
 [[ -f ~/.config/bash/bashrc ]] && . ~/.config/bash/bashrc
 
-[[ -z "$DISPLAY" ]] && [[ -n "$XDG_VTNR" ]] && [[ "$XDG_VTNR" -eq 1 ]] && \
-	exec startx
