@@ -25,6 +25,7 @@ username=ryan
 echo "Installing defaults"
 sudo pacman -S --noconfirm --needed \
 	alsa-utils \
+	base-devel \
 	expac \
 	htop \
 	isync \
@@ -60,7 +61,7 @@ sudo pacman -S --noconfirm --needed \
 echo "Installing dev tools"
 sudo pacman -S --noconfirm --needed \
 	docker \
-	pandoc \ # For notes
+	pandoc \
 	git \
 	python-pipenv
 
@@ -72,6 +73,7 @@ sudo pacman -S --noconfirm --needed \
 	chromium \
 	deluge \
 	discord \
+	dmenu \
 	dunst \
 	evolution \
 	feh \
@@ -89,7 +91,6 @@ sudo pacman -S --noconfirm --needed \
 	scrot \
 	signal-desktop \
 	sxiv \
-	termite \
 	vlc \
 	xbindkeys \
 	xorg-xinit \
@@ -98,6 +99,7 @@ sudo pacman -S --noconfirm --needed \
 
 sudo pacman -Fy
 
+sudo usermod -s /usr/bin/zsh $username
 #TODO chown the local directory to the user that was created, or maybe wheel group?
 #TODO download pacaur and install it using makepkg
 
@@ -115,17 +117,17 @@ mkdir /home/$username/documents/test
 # TODO: install yay
 
 git clone https://aur.archlinux.org/yay.git /home/$username/documents/sources/yay
-cd !$
+cd /home/$username/documents/sources/yay
 makepkg -i
-cd -
+cd /home/$username/.config
 
 yay -S \
+	activitywatch-bin \
 	betterlockscreen \
 	brightnessctl \
 	slack-desktop \
+	termite \
 	zoom
 
-systemctl start NetworkManager
-systemctl enable NetworkManager
 systemctl start bluetooth
 systemctl enable bluetooth
