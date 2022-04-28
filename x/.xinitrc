@@ -2,6 +2,8 @@
 # If you don't know a command, don't forget to google it and look at the man
 # page!  I'll comment special tricks :)
 
+xset r off
+
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
     [ -x "$f" ] && . "$f"
@@ -29,8 +31,10 @@ slack &
 signal-desktop &
 caprine &
 
-rescuetime &
-aw-qt & #mopidy &
+#rescuetime &
+#aw-qt &
+#mopidy &
+bash ~/music/start_jack.sh &
 #protonmail-bridge &
 #mpdscribble --conf $XDG_CONFIG_HOME/mpdscribble/mpdscribble.conf &
 exec i3
